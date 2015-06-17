@@ -3,7 +3,7 @@ layout: post
 title: "include和extend的使用"
 date: 2015-06-17 12:08:58 +0800
 comments: true
-categories: ruby, rails
+categories: [ruby, rails]
 ---
 1.在类定义中引入模块，是模块中的方法成为类的实例方法。这种情况是最常见的，直接 `include` 即可。
 
