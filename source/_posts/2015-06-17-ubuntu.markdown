@@ -3,7 +3,7 @@ layout: post
 title: "ubuntu服务器相关－前言"
 date: 2015-06-17 14:25:09 +0800
 comments: true
-categories: 
+categories: ubuntu
 ---
 
 假设你已经有了一台新的服务器的ip、账号（默认是root）和密码，用ssh登陆后开始以下操作：
