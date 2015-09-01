@@ -1,172 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Winter&#8217;Blog</title>
-  <meta name="author" content="Winter">
-
-  
-  <meta name="description" content="function：参数（可选，调用时需要匹配），有方法名，运行结果为对象，return跳出当前方法，任何地方都可以执行，
-lambda：参数（可选，调用时需要匹配），有块名，运行结果为对象，return跳出当前块，只有在函数体中或调用#call来执行
-proc：参数（可选，调用时不必匹配），有块名 &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://www.rails.pub">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
-<!--- MathJax Configuration -->
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-</head>
-
-<body   class="collapse-sidebar sidebar-footer" >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Winter&#8217;Blog</a></h1>
-  
-    <h2>good good study， day day up</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
-  
-</ul>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <title><![CDATA[Winter'Blog]]></title>
+  <link href="http://www.rails.pub/atom.xml" rel="self"/>
+  <link href="http://www.rails.pub/"/>
+  <updated>2015-09-01T15:24:29+08:00</updated>
+  <id>http://www.rails.pub/</id>
+  <author>
+    <name><![CDATA[Winter]]></name>
     
-      <form action="https://www.google.com/search" method="get">
-        <fieldset role="search">
-          <input type="hidden" name="sitesearch" value="www.rails.pub" />
-    
-          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-        </fieldset>
-      </form>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
   
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/07/31/ruby/">Function, Lambda, Proc, Blcok的区别</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-07-31T22:59:17+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2015</span></span> <span class='time'>10:59 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>function：参数（可选，调用时需要匹配），有方法名，运行结果为对象，return跳出当前方法，任何地方都可以执行，
+  <entry>
+    <title type="html"><![CDATA[Function, Lambda, Proc, Blcok的区别]]></title>
+    <link href="http://www.rails.pub/blog/2015/07/31/ruby/"/>
+    <updated>2015-07-31T22:59:17+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/07/31/ruby</id>
+    <content type="html"><![CDATA[<p>function：参数（可选，调用时需要匹配），有方法名，运行结果为对象，return跳出当前方法，任何地方都可以执行，
 lambda：参数（可选，调用时需要匹配），有块名，运行结果为对象，return跳出当前块，只有在函数体中或调用#call来执行
 proc：参数（可选，调用时不必匹配），有块名，一个执行的过程，return跳出当前作用域，只有在函数体中或调用#call来执行
 block：参数（可选，调用时不必匹配），匿名块，一个执行的过程，return跳出当前作用域，只能在函数体中执行</p>
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Ubuntu]]></title>
+    <link href="http://www.rails.pub/blog/2015/06/23/ubuntu/"/>
+    <updated>2015-06-23T23:27:25+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/06/23/ubuntu</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/06/23/ubuntu/">Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-06-23T23:27:25+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2015</span></span> <span class='time'>11:27 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/06/18/git-base/">Git Base</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-06-18T11:13:48+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>11:13 am</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>起步</p>
+  <entry>
+    <title type="html"><![CDATA[Git Base]]></title>
+    <link href="http://www.rails.pub/blog/2015/06/18/git-base/"/>
+    <updated>2015-06-18T11:13:48+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/06/18/git-base</id>
+    <content type="html"><![CDATA[<p>起步</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -239,36 +112,15 @@ block：参数（可选，调用时不必匹配），匿名块，一个执行的
 </span><span class='line'>git tag -a <span class="o">[</span>name<span class="o">]</span> -m <span class="s1">&#39;yourMessage&#39;</span> <span class="c"># 创建带注释的tag</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/06/18/git-install/">Git</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-06-18T11:00:24+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>11:00 am</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>git 安装</h3>
+  <entry>
+    <title type="html"><![CDATA[Git]]></title>
+    <link href="http://www.rails.pub/blog/2015/06/18/git-install/"/>
+    <updated>2015-06-18T11:00:24+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/06/18/git-install</id>
+    <content type="html"><![CDATA[<h3>git 安装</h3>
 
 <p><code>ubuntu</code></p>
 
@@ -286,36 +138,15 @@ block：参数（可选，调用时不必匹配），匿名块，一个执行的
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>brew install git
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/06/17/ubuntu/">Ubuntu服务器相关－前言</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-06-17T14:25:09+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>2:25 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>假设你已经有了一台新的服务器的ip、账号（默认是root）和密码，用ssh登陆后开始以下操作：</p>
+  <entry>
+    <title type="html"><![CDATA[Ubuntu服务器相关－前言]]></title>
+    <link href="http://www.rails.pub/blog/2015/06/17/ubuntu/"/>
+    <updated>2015-06-17T14:25:09+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/06/17/ubuntu</id>
+    <content type="html"><![CDATA[<p>假设你已经有了一台新的服务器的ip、账号（默认是root）和密码，用ssh登陆后开始以下操作：</p>
 
 <h3>新建用户</h3>
 
@@ -341,36 +172,15 @@ block：参数（可选，调用时不必匹配），匿名块，一个执行的
 
 
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/06/17/syntax/">Include和extend的使用</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-06-17T12:08:58+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:08 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>1.在类定义中引入模块，是模块中的方法成为类的实例方法。这种情况是最常见的，直接 <code>include</code> 即可。</p>
+  <entry>
+    <title type="html"><![CDATA[Include和extend的使用]]></title>
+    <link href="http://www.rails.pub/blog/2015/06/17/syntax/"/>
+    <updated>2015-06-17T12:08:58+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/06/17/syntax</id>
+    <content type="html"><![CDATA[<p>1.在类定义中引入模块，是模块中的方法成为类的实例方法。这种情况是最常见的，直接 <code>include</code> 即可。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -472,36 +282,15 @@ block：参数（可选，调用时不必匹配），匿名块，一个执行的
 </span><span class='line'><span class="no">Person</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1">#=&gt; &quot;this is a method on the Person class&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/06/17/octopress-commond-line/">Octopress Commond Line</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-06-17T12:03:26+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:03 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>octopress常用命令</h2>
+  <entry>
+    <title type="html"><![CDATA[Octopress Commond Line]]></title>
+    <link href="http://www.rails.pub/blog/2015/06/17/octopress-commond-line/"/>
+    <updated>2015-06-17T12:03:26+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/06/17/octopress-commond-line</id>
+    <content type="html"><![CDATA[<h2>octopress常用命令</h2>
 
 <h3>部署到Github Pages</h3>
 
@@ -570,87 +359,16 @@ block：参数（可选，调用时不必匹配），匿名块，一个执行的
 </span><span class='line'>rake preview <span class="c"># 将页面挂载在webserver的`http://localhost：4000`</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[This Is Post]]></title>
+    <link href="http://www.rails.pub/blog/2011/06/01/this-is-a-test/"/>
+    <updated>2011-06-01T14:44:00+08:00</updated>
+    <id>http://www.rails.pub/blog/2011/06/01/this-is-a-test</id>
+    <content type="html"><![CDATA[<p>Booyah!</p>
+]]></content>
+  </entry>
   
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/01/this-is-a-test/">This Is Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2011-06-01T14:44:00+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>1</span><span class='date-suffix'>st</span>, <span class='date-year'>2011</span></span> <span class='time'>2:44 pm</span></time>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Booyah!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - Winter -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/lucaslew/whitespace">Whitespace</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

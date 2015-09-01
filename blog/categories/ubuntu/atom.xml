@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ubuntu | Winter'Blog]]></title>
+  <link href="http://www.rails.pub/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://www.rails.pub/"/>
+  <updated>2015-09-01T15:24:29+08:00</updated>
+  <id>http://www.rails.pub/</id>
+  <author>
+    <name><![CDATA[Winter]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu]]></title>
+    <link href="http://www.rails.pub/blog/2015/06/23/ubuntu/"/>
+    <updated>2015-06-23T23:27:25+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/06/23/ubuntu</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu服务器相关－前言]]></title>
+    <link href="http://www.rails.pub/blog/2015/06/17/ubuntu/"/>
+    <updated>2015-06-17T14:25:09+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/06/17/ubuntu</id>
+    <content type="html"><![CDATA[<p>假设你已经有了一台新的服务器的ip、账号（默认是root）和密码，用ssh登陆后开始以下操作：</p>
+
+<h3>新建用户</h3>
+
+<pre><code class="bash">useradd -m -s /bin/bash  myname
+</code></pre>
+
+<h3>把新用户加到<code>sudo</code> 群组</h3>
+
+<h4>只有加到 <code>sudo</code> 群组的用户才能使用sudo命令</h4>
+
+<pre><code class="bash">adduser myname sudo
+</code></pre>
+
+<h3>设置新用户密码</h3>
+
+<pre><code class="bash">passwd myname
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
