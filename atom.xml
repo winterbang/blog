@@ -4,7 +4,7 @@
   <title><![CDATA[Winter'Blog]]></title>
   <link href="http://www.rails.pub/atom.xml" rel="self"/>
   <link href="http://www.rails.pub/"/>
-  <updated>2015-09-01T15:24:29+08:00</updated>
+  <updated>2015-09-01T15:53:11+08:00</updated>
   <id>http://www.rails.pub/</id>
   <author>
     <name><![CDATA[Winter]]></name>
@@ -22,15 +22,6 @@
 lambda：参数（可选，调用时需要匹配），有块名，运行结果为对象，return跳出当前块，只有在函数体中或调用#call来执行
 proc：参数（可选，调用时不必匹配），有块名，一个执行的过程，return跳出当前作用域，只有在函数体中或调用#call来执行
 block：参数（可选，调用时不必匹配），匿名块，一个执行的过程，return跳出当前作用域，只能在函数体中执行</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ubuntu]]></title>
-    <link href="http://www.rails.pub/blog/2015/06/23/ubuntu/"/>
-    <updated>2015-06-23T23:27:25+08:00</updated>
-    <id>http://www.rails.pub/blog/2015/06/23/ubuntu</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   

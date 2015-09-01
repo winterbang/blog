@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Winter'Blog]]></title>
   <link href="http://www.rails.pub/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://www.rails.pub/"/>
-  <updated>2015-09-01T15:24:29+08:00</updated>
+  <updated>2015-09-01T15:53:11+08:00</updated>
   <id>http://www.rails.pub/</id>
   <author>
     <name><![CDATA[Winter]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Ubuntu]]></title>
-    <link href="http://www.rails.pub/blog/2015/06/23/ubuntu/"/>
-    <updated>2015-06-23T23:27:25+08:00</updated>
-    <id>http://www.rails.pub/blog/2015/06/23/ubuntu</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu服务器相关－前言]]></title>
