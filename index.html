@@ -154,13 +154,23 @@
 </table>
 
 
-<dl>
-<dt>function -> lambda -> proc -> block 是一个越来越抽象的过渡的过程:</dt>
-<dd><p> 对我们来说最比较熟悉的应该是function了，说白了就是数学中的映射，我们传给funciton一个参数，通过内部定义的一些逻辑处理得到一个返回值，从某种意义上来说，我觉得funciton和变量没什么区别，不论是function还是变量，我们从他们中得到的是个对象，只是function返回的对象可以由我们传入的参数动态的操作，其次function与其他的三种的不同是因为有了自己的作用域，定义的内部只能使用当前调用对象有资格去使用的binding，function附属于它自己的归属者。</p></dd>
-<dd> lambda  广义上来说lambda，proc，block都是block，广义的block和function的主要区别就是作用域，当然广义的block有自己的作用域，它限制了外部去访问里面的binding，但它没有限制内部去调用外部的binding，当然他们的调用也必须像function一样附属在对象上，只是function在定义的时候就已经知道了他附属的对象，而block需要在执行的时候去绑定他的调用对象且必须在方法中执行，lambda和function的区别也就是广义的block和funciton的区别了。</dd>
-<dd><p> proc 比lambda更随意了，它简单的只是个执行过程，没有自己的返回值，就像是浮动着的一块代码，你放哪里执行就在哪里执行一下。</p></dd>
-<dd><p> block 是更纯粹的block了，它连名字都没有了。</p></dd>
-</dl>
+<p>function -> lambda -> proc -> block 是一个越来越抽象的过渡的过程:</p>
+
+<blockquote><p>function</p></blockquote>
+
+<p>对我们来说最比较熟悉的应该是function了，说白了就是数学中的映射，我们传给funciton一个参数，通过内部定义的一些逻辑处理得到一个返回值，从某种意义上来说，我觉得funciton和变量没什么区别，不论是function还是变量，我们从他们中得到的是个对象，只是function返回的对象可以由我们传入的参数动态的操作，其次function与其他的三种的不同是因为有了自己的作用域，定义的内部只能使用当前调用对象有资格去使用的binding，function附属于它自己的归属者。</p>
+
+<blockquote><p>lambda</p></blockquote>
+
+<p>广义上来说lambda，proc，block都是block，广义的block和function的主要区别就是作用域，当然广义的block有自己的作用域，它限制了外部去访问里面的binding，但它没有限制内部去调用外部的binding，当然他们的调用也必须像function一样附属在对象上，只是function在定义的时候就已经知道了他附属的对象，而block需要在执行的时候去绑定他的调用对象且必须在方法中执行，lambda和function的区别也就是广义的block和funciton的区别了。</p>
+
+<blockquote><p>proc</p></blockquote>
+
+<p>比lambda更随意了，它简单的只是个执行过程，没有自己的返回值，就像是浮动着的一块代码，你放哪里执行就在哪里执行一下。</p>
+
+<blockquote><p>block</p></blockquote>
+
+<p>是更纯粹的block了，它连名字都没有了。</p>
 
 <p>小结：function像是一个特别规矩的好孩子，墨守成规的工作着，lambda像是一个有些调皮但还算明事理的孩子，proc就有点不听话了，至于blcok就太过分了自己叫啥都不知道了</p>
 </div>
