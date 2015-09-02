@@ -9,9 +9,11 @@
   <meta name="author" content="Winter">
 
   
-  <meta name="description" content="方法名 说明 function 参数（可选，调用时需要匹配），有方法名，运行结果为对象，return跳出当前方法，任何地方都可以执行 lambda
-参数（可选，调用时需要匹配），有块名，运行结果为对象，return跳出当前块，只有在函数体中或调用#call来执行 proc
-参数（可选， &hellip;">
+  <meta name="description" content="对象 方法名 参数 返回值 执行上下文 function
+有方法名 参数（可选，调用时严格匹配）
+有返回值，return跳出当前方法
+任何地方都可以执行 lambda 有块名 参数（可选，调用时严格匹配）
+有返回值，return跳出当前块 只有在函数体中或调用#call来执行 proc 有块名 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -54,6 +56,10 @@
   
   
   
+<ul class="subscribe">
+  <li><a href="http://delicious.com/winterbang" rel="subscribe-delicious" title="Delicious Bookmarks" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 100,0 0,0 0,100 100,100 z M 95,95 50,95 50.001,50 5,50 5,5 50,5 50.001002,50 95,50 z"></path></svg></a></li>
+</ul>
+  
   
   
   
@@ -94,7 +100,7 @@
 
 
 
-<time class='entry-date' datetime='2015-07-31T22:59:17+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2015</span></span> <span class='time'>10:59 pm</span></time>
+<time class='entry-date' datetime='2015-07-31T22:59:17+08:00'><span class='date'>2015-07-31</span> <span class='time'>10:59 pm</span></time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -107,30 +113,50 @@
 <div class="entry-content"><table>
 <thead>
 <tr>
-<th>方法名         </th>
-<th>说明</th>
+<th>对象    </th>
+<th>方法名  </th>
+<th>参数                     </th>
+<th>返回值                          </th>
+<th>执行上下文       </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>function</td>
-<td> 参数（可选，调用时需要匹配），有方法名，运行结果为对象，return跳出当前方法，任何地方都可以执行</td>
+<td>有方法名 </td>
+<td>参数（可选，调用时严格匹配）</td>
+<td>有返回值，return跳出当前方法</td>
+<td>任何地方都可以执行</td>
 </tr>
 <tr>
-<td>lambda</td>
-<td>参数（可选，调用时需要匹配），有块名，运行结果为对象，return跳出当前块，只有在函数体中或调用#call来执行</td>
+<td>lambda  </td>
+<td>有块名   </td>
+<td>参数（可选，调用时严格匹配）</td>
+<td>有返回值，return跳出当前块  </td>
+<td>只有在函数体中或调用#call来执行</td>
 </tr>
 <tr>
-<td>proc</td>
-<td>参数（可选，调用时不必匹配），有块名，一个执行的过程，return跳出当前作用域，只有在函数体中或调用#call来执行</td>
+<td>proc    </td>
+<td>有块名  </td>
+<td>参数（可选，调用时非严格匹配）</td>
+<td>无返回值，一个执行的过程，return跳出当前作用域</td>
+<td>只有在函数体中或调用#call来执行</td>
 </tr>
 <tr>
-<td>block</td>
-<td>参数（可选，调用时不必匹配），匿名块，一个执行的过程，return跳出当前作用域，只能在函数体中执行</td>
+<td>block   </td>
+<td>匿名块  </td>
+<td>参数（可选，调用时非严格匹配）</td>
+<td>无返回值，一个执行的过程，return跳出当前作用域</td>
+<td>只能在函数体中执行</td>
 </tr>
 </tbody>
 </table>
 
+
+<dl>
+<dt>function -> lambda -> proc -> block 是一个越来越抽象的过渡的过程:</dt>
+<dd><p> 对我们来说最比较熟悉的应该是function了，说白了就是数学中的映射，我们传给funciton一个参数，通过内部定义的一些逻辑处理得到一个返回值，从某种意义上来说，我觉得funciton和变量没什么区别，不论是function还是变量，我们从他们中得到的是个对象，只是function返回的对象可以由我们传入的参数动态的操作，其次function与其他的三种的不同是因为有了自己的作用域，定义的内部只能使用当前调用对象有资格去使用的binding，function附属于它自己的归属者。</p></dd>
+</dl>
 </div>
 
 
@@ -153,7 +179,7 @@
 
 
 
-<time class='entry-date' datetime='2015-07-31T22:59:17+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2015</span></span> <span class='time'>10:59 pm</span></time>
+<time class='entry-date' datetime='2015-07-31T22:59:17+08:00'><span class='date'>2015-07-31</span> <span class='time'>10:59 pm</span></time>
       
       
 
