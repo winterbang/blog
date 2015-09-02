@@ -13,7 +13,8 @@ description:
 # You can customize the format as defined in
 # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
 # Additionally, %o will give you the ordinal representation of the day
-date_format: "ordinal"
+# date_format: "ordinal"
+date_format: "%Y-%m-%d"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
@@ -56,7 +57,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 # blog_index_asides:
-# post_asides:
+post_asides: [custom/asides/about.html]
 # page_asides:
 
 # ----------------------- #
@@ -87,15 +88,25 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:
+delicious_user: winterbang
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: winterbang
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+
+email:
+  address:             zwtao90@gmail.com
+  share_subject:       :title by :author
+  share_message:       :title by :author - :url
+  share_link_text:     Email
+  share_link_title:    Share via email
+  contact_link_text:   Email :author
+  contact_link_title:  Email :author
