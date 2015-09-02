@@ -4,11 +4,11 @@
   <title><![CDATA[Category: Git | Winter'Blog]]></title>
   <link href="http://www.rails.pub/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://www.rails.pub/"/>
-  <updated>2015-09-02T13:50:59+08:00</updated>
+  <updated>2015-09-02T14:31:35+08:00</updated>
   <id>http://www.rails.pub/</id>
   <author>
     <name><![CDATA[Winter]]></name>
-    
+    <email><![CDATA[{"address"=>&#8220;zwtao90@gmail.com&#8221;, &#8220;share_subject&#8221;=>&#8221;:title by :author&#8221;, &#8220;share_message&#8221;=>&#8221;:title by :author - :url&#8221;, &#8220;share_link_text&#8221;=>&#8221;Email&#8221;, &#8220;share_link_title&#8221;=>&#8221;Share via email&#8221;, &#8220;contact_link_text&#8221;=>&#8221;Email :author&#8221;, &#8220;contact_link_title&#8221;=>&#8221;Email :author&#8221;}]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
