@@ -5,15 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Function, Lambda, Proc, Blcok的区别 - Winter&#8217;Blog</title>
+  <title>Public Protected Private的微妙的区别 - Winter&#8217;Blog</title>
   <meta name="author" content="Winter">
 
   
-  <meta name="description" content="对象 方法名 参数 返回值 执行上下文 function
-有方法名 参数（可选，调用时严格匹配）
-有返回值，return跳出当前方法
-任何地方都可以执行 lambda 有块名 参数（可选，调用时严格匹配）
-有返回值，return跳出当前块 只有在函数体中或调用#call来执行 proc 有块名 &hellip;">
+  <meta name="description" content="这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。 public 即定义普通的方法，这个不用多说什么，都明白 protected 它规定的方法的特性介于public和private之间， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -22,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.rails.pub/blog/2015/07/31/ruby">
+  <link rel="canonical" href="http://www.rails.pub/blog/2015/09/02/ruby">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
@@ -92,7 +88,7 @@
   <header>
     
       
-        <h1 class="entry-title">Function, Lambda, Proc, Blcok的区别</h1>
+        <h1 class="entry-title">Public Protected Private的微妙的区别</h1>
       
     
     
@@ -102,7 +98,7 @@
 
 
 
-<time class='entry-date' datetime='2015-07-31T22:59:17+08:00'><span class='date'>2015-07-31</span> <span class='time'>10:59 pm</span></time>
+<time class='entry-date' datetime='2015-09-02T20:30:15+08:00'><span class='date'>2015-09-02</span> <span class='time'>8:30 pm</span></time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -112,68 +108,19 @@
   </header>
 
 
-<div class="entry-content"><table>
-<thead>
-<tr>
-<th>对象    </th>
-<th>方法名  </th>
-<th>参数                     </th>
-<th>返回值                          </th>
-<th>执行上下文       </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>function</td>
-<td>有方法名 </td>
-<td>参数（可选，调用时严格匹配）</td>
-<td>有返回值，return跳出当前方法</td>
-<td>任何地方都可以执行</td>
-</tr>
-<tr>
-<td>lambda  </td>
-<td>有块名   </td>
-<td>参数（可选，调用时严格匹配）</td>
-<td>有返回值，return跳出当前块  </td>
-<td>只有在函数体中或调用#call来执行</td>
-</tr>
-<tr>
-<td>proc    </td>
-<td>有块名  </td>
-<td>参数（可选，调用时非严格匹配）</td>
-<td>无返回值，一个执行的过程，return跳出当前作用域</td>
-<td>只有在函数体中或调用#call来执行</td>
-</tr>
-<tr>
-<td>block   </td>
-<td>匿名块  </td>
-<td>参数（可选，调用时非严格匹配）</td>
-<td>无返回值，一个执行的过程，return跳出当前作用域</td>
-<td>只能在函数体中执行</td>
-</tr>
-</tbody>
-</table>
+<div class="entry-content"><p>这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。</p>
 
+<blockquote><p>public</p></blockquote>
 
-<p>function -> lambda -> proc -> block 是一个越来越抽象的过渡的过程:</p>
+<p>即定义普通的方法，这个不用多说什么，都明白</p>
 
-<blockquote><p>function</p></blockquote>
+<blockquote><p>protected</p></blockquote>
 
-<p>对我们来说最比较熟悉的应该是function了，说白了就是数学中的映射，我们传给funciton一个参数，通过内部定义的一些逻辑处理得到一个返回值，从某种意义上来说，我觉得funciton和变量没什么区别，不论是function还是变量，我们从他们中得到的是个对象，只是function返回的对象可以由我们传入的参数动态的操作，其次function与其他的三种的不同是因为有了自己的作用域，定义的内部只能使用当前调用对象有资格去使用的binding，function附属于它自己的归属者。</p>
+<p>它规定的方法的特性介于public和private之间，首先它定义的方法是不对外调用的，所谓的不对外调用就是说你可以在本类的继承链上的任何子类和当前类中调用，它与public相同的是必须又对象来调用不能直接用方法名来执行</p>
 
-<blockquote><p>lambda</p></blockquote>
+<blockquote><p>private</p></blockquote>
 
-<p>广义上来说lambda，proc，block都是block，广义的block和function的主要区别就是作用域，当然广义的block有自己的作用域，它限制了外部去访问里面的binding，但它没有限制内部去调用外部的binding，当然他们的调用也必须像function一样附属在对象上，只是function在定义的时候就已经知道了他附属的对象，而block需要在执行的时候去绑定他的调用对象且必须在方法中执行，lambda和function的区别也就是广义的block和funciton的区别了。</p>
-
-<blockquote><p>proc</p></blockquote>
-
-<p>比lambda更随意了，它简单的只是个执行过程，没有自己的返回值，就像是浮动着的一块代码，你放哪里执行就在哪里执行一下。</p>
-
-<blockquote><p>block</p></blockquote>
-
-<p>是更纯粹的block了，它连名字都没有了。</p>
-
-<p>小结：function像是一个特别规矩的好孩子，墨守成规的工作着，lambda像是一个有些调皮但还算明事理的孩子，proc就有点不听话了，至于blcok就太过分了自己叫啥都不知道了</p>
+<p>说它保守吧也确实，它规定的方法只能在当前类中使用，说它不保守吧，直接使用不用附属对象，默认就是当前对象，确实已经私有了，它的调用者也就确定了</p>
 </div>
 
 
@@ -196,7 +143,7 @@
 
 
 
-<time class='entry-date' datetime='2015-07-31T22:59:17+08:00'><span class='date'>2015-07-31</span> <span class='time'>10:59 pm</span></time>
+<time class='entry-date' datetime='2015-09-02T20:30:15+08:00'><span class='date'>2015-09-02</span> <span class='time'>8:30 pm</span></time>
       
       
 
@@ -211,7 +158,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.rails.pub/blog/2015/07/31/ruby/" data-via="" data-counturl="http://www.rails.pub/blog/2015/07/31/ruby/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.rails.pub/blog/2015/09/02/ruby/" data-via="" data-counturl="http://www.rails.pub/blog/2015/09/02/ruby/" >Tweet</a>
   
   
   
@@ -220,10 +167,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/06/18/git-base/" title="Previous Post: git base">&laquo; git base</a>
+        <a class="basic-alignment left" href="/blog/2015/07/31/ruby/" title="Previous Post: function, lambda, proc, blcok的区别">&laquo; function, lambda, proc, blcok的区别</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/09/02/ruby/" title="Next Post: public protected private的微妙的区别">public protected private的微妙的区别 &raquo;</a>
       
     </p>
   </footer>
@@ -252,8 +197,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.rails.pub/blog/2015/07/31/ruby/';
-        var disqus_url = 'http://www.rails.pub/blog/2015/07/31/ruby/';
+        var disqus_identifier = 'http://www.rails.pub/blog/2015/09/02/ruby/';
+        var disqus_url = 'http://www.rails.pub/blog/2015/09/02/ruby/';
         var disqus_script = 'embed.js';
       
     (function () {

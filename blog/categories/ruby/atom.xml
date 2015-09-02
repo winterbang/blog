@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Winter'Blog]]></title>
   <link href="http://www.rails.pub/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://www.rails.pub/"/>
-  <updated>2015-09-02T14:31:35+08:00</updated>
+  <updated>2015-09-02T20:58:52+08:00</updated>
   <id>http://www.rails.pub/</id>
   <author>
     <name><![CDATA[Winter]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Public Protected Private的微妙的区别]]></title>
+    <link href="http://www.rails.pub/blog/2015/09/02/ruby/"/>
+    <updated>2015-09-02T20:30:15+08:00</updated>
+    <id>http://www.rails.pub/blog/2015/09/02/ruby</id>
+    <content type="html"><![CDATA[<p>这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。</p>
+
+<blockquote><p>public</p></blockquote>
+
+<p>即定义普通的方法，这个不用多说什么，都明白</p>
+
+<blockquote><p>protected</p></blockquote>
+
+<p>它规定的方法的特性介于public和private之间，首先它定义的方法是不对外调用的，所谓的不对外调用就是说你可以在本类的继承链上的任何子类和当前类中调用，它与public相同的是必须又对象来调用不能直接用方法名来执行</p>
+
+<blockquote><p>private</p></blockquote>
+
+<p>说它保守吧也确实，它规定的方法只能在当前类中使用，说它不保守吧，直接使用不用附属对象，默认就是当前对象，确实已经私有了，它的调用者也就确定了</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Function, Lambda, Proc, Blcok的区别]]></title>
