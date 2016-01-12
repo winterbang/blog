@@ -29,19 +29,22 @@
     <lastmod>2015-06-17T12:03:26+08:00</lastmod>
   </url>
   <url>
-    <loc>http://www.rails.pub/blog/archives/</loc>
+    <loc>http://www.rails.pub/posts/</loc>
   </url>
   <url>
     <loc>http://www.rails.pub/</loc>
   </url>
   <url>
+    <loc>http://www.rails.pub/blog/archives/</loc>
+  </url>
+  <url>
     <loc>http://www.rails.pub/projects/</loc>
   </url>
   <url>
-    <loc>http://www.rails.pub/jottings/</loc>
+    <loc>http://www.rails.pub/about/</loc>
   </url>
   <url>
-    <loc>http://www.rails.pub/about/</loc>
+    <loc>http://www.rails.pub/jottings/</loc>
   </url>
   <url>
     <loc>http://www.rails.pub/blog/categories/octopress/</loc>

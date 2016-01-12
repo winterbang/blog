@@ -24,142 +24,300 @@
   <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
-<!--- MathJax Configuration -->
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 </head>
 
-<body   class="collapse-sidebar sidebar-footer" >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Winter&#8217;Blog</a></h1>
-  
-    <h2>肚子里藏着一颗文艺心的无节操有上限的屌丝骚年</h2>
-  
-</hgroup>
+  <body>
+    <div class="all-posts">
+  <div class="container">
+    <div class="row">
+      <div class="list-title col-md-offset-2 col-md-8">
+        <h4>Posts in ruby</h4>
+      </div>
+    </div>
+  </div>
 
-</header>
-  <nav role="navigation"><ul class="subscribe" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 13.310204,73.332654 C 5.967347,73.332654 0,79.322448 0,86.621428 c 0,7.338776 5.967347,13.262246 13.310204,13.262246 7.370408,0 13.328572,-5.92245 13.328572,-13.262246 0,-7.29898 -5.958164,-13.288774 -13.328572,-13.288774 z M 0.01530612,33.978572 V 53.143878 C 12.493878,53.143878 24.229592,58.02347 33.068368,66.865306 41.894898,75.685714 46.767346,87.47449 46.767346,100 h 19.25 C 66.017346,63.592858 36.4,33.979592 0.01530612,33.978572 l 0,0 z M 0.03877552,0 V 19.17449 C 44.54796,19.17551 80.77551,55.437756 80.77551,100 H 100 C 100,44.87653 55.15102,0 0.03877552,0 z"></path></svg></a></li>
+  <div class="article-list">
+    <div class="container">
+      
+        
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            <article>
+  <h2><a href="/blog/2015/09/02/ruby/">Public Protected Private的微妙的区别</a></h2>
   
-</ul>
-  
-  
-  
-<ul class="subscribe">
-  <li><a href="http://delicious.com/winterbang" rel="subscribe-delicious" title="Delicious Bookmarks" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewbox="0 0 100 100"><path class="social" d="M 100,0 0,0 0,100 100,100 z M 95,95 50,95 50.001,50 5,50 5,5 50,5 50.001002,50 95,50 z"></path></svg></a></li>
-</ul>
-  
-  
-  
-  
-  
-  
-  
-  
+  <p>
+    <p>这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。</p>
+
+<blockquote><p>public</p></blockquote>
+
+<p>即定义普通的方法，这个不用多说什么，都明白</p>
+
+<blockquote><p>protected</p></blockquote>
+
+<p>它规定的方法的特性介于public和private之间，首先它定义的方法是不对外调用的，所谓的不对外调用就是说你可以在本类的继承链上的任何子类和当前类中调用，它与public相同的是必须又对象来调用不能直接用方法名来执行</p>
+
+<blockquote><p>private</p></blockquote>
+
+<p>说它保守吧也确实，它规定的方法只能在当前类中使用，说它不保守吧，直接使用不用附属对象，默认就是当前对象，确实已经私有了，它的调用者也就确定了</p>
+
+  </p>
+  <span class="meta">
     
-      <form action="https://www.google.com/search" method="get">
-        <fieldset role="search">
-          <input type="hidden" name="sitesearch" value="www.rails.pub" />
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-09-02T20:30:15+08:00" pubdate data-updated="true"></time>
     
-          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-        </fieldset>
-      </form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/jottings">随笔</a></li>
-  <li><a href="/about">about</a></li>
-</ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article role="article">
+in
+<span class="categories">
   
-  <header>
-    <h1 class="entry-title">Category: Ruby</h1>
-    
-  </header>
+    <a class='category' href='/blog/categories/ruby/'>ruby</a>
   
-  <div id="blog-archives" class="category">
+</span>
 
 
+  </span>
 
   
-  <h2>2015</h2>
-
-<article>
-  
-<h1><a href="/blog/2015/09/02/ruby/">Public Protected Private的微妙的区别</a></h1>
-<time datetime="2015-09-02T20:30:15+08:00" pubdate><span class='month'>Sep</span> <span class='day'>02</span> <span class='year'>2015</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
-</footer>
-
-
 </article>
 
-
-
-<article>
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            <article>
+  <h2><a href="/blog/2015/07/31/ruby/">Function, Lambda, Proc, Blcok的区别</a></h2>
   
-<h1><a href="/blog/2015/07/31/ruby/">Function, Lambda, Proc, Blcok的区别</a></h1>
-<time datetime="2015-07-31T22:59:17+08:00" pubdate><span class='month'>Jul</span> <span class='day'>31</span> <span class='year'>2015</span></time>
+  <p>
+    <table>
+<thead>
+<tr>
+<th>对象    </th>
+<th>方法名  </th>
+<th>参数                     </th>
+<th>返回值                          </th>
+<th>执行上下文       </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>function</td>
+<td>有方法名 </td>
+<td>参数（可选，调用时严格匹配）</td>
+<td>有返回值，return跳出当前方法</td>
+<td>任何地方都可以执行</td>
+</tr>
+<tr>
+<td>lambda  </td>
+<td>有块名   </td>
+<td>参数（可选，调用时严格匹配）</td>
+<td>有返回值，return跳出当前块  </td>
+<td>只有在函数体中或调用#call来执行</td>
+</tr>
+<tr>
+<td>proc    </td>
+<td>有块名  </td>
+<td>参数（可选，调用时非严格匹配）</td>
+<td>无返回值，一个执行的过程，return跳出当前作用域</td>
+<td>只有在函数体中或调用#call来执行</td>
+</tr>
+<tr>
+<td>block   </td>
+<td>匿名块  </td>
+<td>参数（可选，调用时非严格匹配）</td>
+<td>无返回值，一个执行的过程，return跳出当前作用域</td>
+<td>只能在函数体中执行</td>
+</tr>
+</tbody>
+</table>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
-</footer>
+
+<p>function -> lambda -> proc -> block 是一个越来越抽象的过渡的过程:</p>
+
+<blockquote><p>function</p></blockquote>
+
+<p>对我们来说最比较熟悉的应该是function了，说白了就是数学中的映射，我们传给funciton一个参数，通过内部定义的一些逻辑处理得到一个返回值，从某种意义上来说，我觉得funciton和变量没什么区别，不论是function还是变量，我们从他们中得到的是个对象，只是function返回的对象可以由我们传入的参数动态的操作，其次function与其他的三种的不同是因为有了自己的作用域，定义的内部只能使用当前调用对象有资格去使用的binding，function附属于它自己的归属者。</p>
+
+<blockquote><p>lambda</p></blockquote>
+
+<p>广义上来说lambda，proc，block都是block，广义的block和function的主要区别就是作用域，当然广义的block有自己的作用域，它限制了外部去访问里面的binding，但它没有限制内部去调用外部的binding，当然他们的调用也必须像function一样附属在对象上，只是function在定义的时候就已经知道了他附属的对象，而block需要在执行的时候去绑定他的调用对象且必须在方法中执行，lambda和function的区别也就是广义的block和funciton的区别了。</p>
+
+<blockquote><p>proc</p></blockquote>
+
+<p>比lambda更随意了，它简单的只是个执行过程，没有自己的返回值，就像是浮动着的一块代码，你放哪里执行就在哪里执行一下。</p>
+
+<blockquote><p>block</p></blockquote>
+
+<p>是更纯粹的block了，它连名字都没有了。</p>
+
+<p>小结：function像是一个特别规矩的好孩子，墨守成规的工作着，lambda像是一个有些调皮但还算明事理的孩子，proc就有点不听话了，至于blcok就太过分了自己叫啥都不知道了</p>
+
+  </p>
+  <span class="meta">
+    
 
 
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-07-31T22:59:17+08:00" pubdate data-updated="true"></time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+  </span>
+
+  
 </article>
 
-
-
-<article>
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            <article>
+  <h2><a href="/blog/2015/06/17/syntax/">Include和extend的使用</a></h2>
   
-<h1><a href="/blog/2015/06/17/syntax/">Include和extend的使用</a></h1>
-<time datetime="2015-06-17T12:08:58+08:00" pubdate><span class='month'>Jun</span> <span class='day'>17</span> <span class='year'>2015</span></time>
+  <p>
+    <p>1.在类定义中引入模块，是模块中的方法成为类的实例方法。这种情况是最常见的，直接 <code>include</code> 即可。</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
-</footer>
+<pre><code class="ruby">module Basic
+    def add(number)
+        self + number
+    end
+end
+
+Fixnum.class_eval do
+    include Basic
+end
+
+3.add 4  #=&gt; 7 
+</code></pre>
+
+<p>2.在类定义中引入模块，使模块中的方法成为类的实例方法。这种情况也是比较常见的，直接 <code>extend</code> 即可。</p>
+
+<pre><code class="ruby">module ExtendMe
+    def verbal_object_id
+         "my object id is #{self.object_id}"
+    end
+end
+
+class Person
+    extend ExtendMe
+end
+
+Person.verbal_object_id #=&gt; "my object id is 24339630"
+</code></pre>
+
+<p>3.有时在类定义中引入模块，既希望引入实例方法，也希望引入类方法，这时需要使用 <code>include</code> ，但是在模块中对类方法的定义有所不同，定义出现在</p>
+
+<pre><code class="ruby">module ExtendThroughInclude
+    def self.included(klass)
+        klass.extend ClassMethods
+    end
+
+    def instance_method
+        "this is an instance method of #{self.class}"
+    end
+
+    module ClassMethods
+        def class_method
+            "this is a method on the #{self} class"
+        end
+    end
+end
+
+class Person
+    include ExtendThroughInclude
+end
+
+Person.new.instance_method #=&gt; "this is an instance method Person"
+Person.new.instance_method #=&gt; "this is a method on the Person class"
+</code></pre>
+
+  </p>
+  <span class="meta">
+    
 
 
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-06-17T12:08:58+08:00" pubdate data-updated="true"></time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+  </span>
+
+  
 </article>
 
+          </div>
+        </div>
+      
+    </div>
+  </div>
 </div>
 
-  
-</article>
-
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+  <span>
+  Powered by <a href="http://octopress.org/">Octopress</a>. Design based on the lovely <a href="https://github.com/sevenadrian/MediumFox">MediumFox</a>.
+</span>
 
 </div>
-
-<aside class="sidebar">
-  
-    
-  
-</aside>
-
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2016 - Winter-<a class="email-contact-link" href="mailto:zwtao90@gmail.com" title="Email Winter">Email Winter</a>
-</p>
-
 </footer>
-  
+
+    
 
 <script type="text/javascript">
       var disqus_shortname = 'winterbang';
@@ -169,33 +327,11 @@
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
 
 
-
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
+  </body>
 </html>
