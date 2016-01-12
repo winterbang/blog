@@ -1,0 +1,9 @@
+<div class="highlight"><pre>git tag <span class="c"># 查看版本</span>
+git tag <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建版本</span>
+git tag -d <span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除版本</span>
+git push origin <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建远程版本(本地版本push到远程)</span>
+git push origin :refs/tags/<span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除远程版本</span>
+git pull origin --tags <span class="c"># 合并远程仓库的tag到本地</span>
+git push origin --tags <span class="c"># 上传本地tag到远程仓库</span>
+git tag -a <span class="o">[</span>name<span class="o">]</span> -m <span class="s1">&#39;yourMessage&#39;</span> <span class="c"># 创建带注释的tag</span>
+</pre></div>
