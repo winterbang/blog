@@ -32,6 +32,9 @@
     <loc>http://www.rails.pub/posts/</loc>
   </url>
   <url>
+    <loc>http://www.rails.pub/categories/</loc>
+  </url>
+  <url>
     <loc>http://www.rails.pub/</loc>
   </url>
   <url>
@@ -47,18 +50,21 @@
     <loc>http://www.rails.pub/jottings/</loc>
   </url>
   <url>
-    <loc>http://www.rails.pub/blog/categories/octopress/</loc>
+    <loc>http://www.rails.pub/categories/show.html</loc>
   </url>
   <url>
-    <loc>http://www.rails.pub/blog/categories/ruby/</loc>
+    <loc>http://www.rails.pub/categories/octopress/</loc>
   </url>
   <url>
-    <loc>http://www.rails.pub/blog/categories/rails/</loc>
+    <loc>http://www.rails.pub/categories/ruby/</loc>
   </url>
   <url>
-    <loc>http://www.rails.pub/blog/categories/ubuntu/</loc>
+    <loc>http://www.rails.pub/categories/rails/</loc>
   </url>
   <url>
-    <loc>http://www.rails.pub/blog/categories/git/</loc>
+    <loc>http://www.rails.pub/categories/ubuntu/</loc>
+  </url>
+  <url>
+    <loc>http://www.rails.pub/categories/git/</loc>
   </url>
 </urlset>
