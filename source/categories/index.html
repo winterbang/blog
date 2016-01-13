@@ -1,0 +1,27 @@
+---
+layout: default
+title: "categories"
+date: 2016-01-13 17:24
+footer: true
+---
+<div class="home-page">
+	<div class="her-row nav-bar">
+    <div class="container">
+      <div class="row">
+        {% include custom/home_landing_row.html %}
+      </div>
+    </div>
+  </div>
+  <div class="article-list">
+    <div class="container">
+      {% for category in site.categories %}
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            {{ category | first | category_link }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
