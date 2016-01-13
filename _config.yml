@@ -65,7 +65,8 @@ post_asides: [custom/asides/about.html]
 # ----------------------- #
 
 # Github repositories
-github_user:
+github: winterbang
+github_user: winterbang
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
@@ -96,7 +97,7 @@ disqus_short_name: winterbang
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-72353121-1
 
 # Facebook Like
 facebook_like: false
