@@ -23,14 +23,49 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/main.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72353121-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
   <body>
+  	<div class="off-canvas">
+  <figure class="avatar">
+    <img src="/images/avatar.jpeg" alt="Picture" title="That's me, Winter.">
+  </figure>
+  <div class="bio">
+      <h1>Hi, I&#8217;m Winter.</h1>
+      <p></p>
+  </div>
+  <nav>
+    <h6>Follow me on</h6>
+    <div class="social-icon-list">
+    <a title="GitHub" href="https://github.com/winterbang">
+      <img src="/images/glyphicons_social_21_github.png"/>
+    </a>
+    <a title="E-Mail" href="mailto:zwtao90@gmail.com">
+      <img src="/images/glyphicons_social_39_e-mail.png"/>
+    </a>
+  </div>
+  </nav>
+</div>
+
+
     <div class="all-posts">
   <div class="container">
     <div class="row">
@@ -47,50 +82,15 @@
         <div class="row">
           <div class="col-md-offset-2 col-md-8">
             <article>
-  <h2><a href="/blog/2015/06/18/git-base/">Git Base</a></h2>
+  <h2>
+    <a href="/blog/2015/06/18/git-base/">
+        
+        2015-06-18 Git Base
+      
+    </a>
+  </h2>
   
-  <p>
-    <p>起步
-<code>bash
-git init    #git初始化
-git add -A  #添加所有文件到版本控制中
-</code>
-远程仓库地址设置相关
-<code>bash
-git clone git://github.com/winterbang/projectname # 检出仓库
-git remote -v  # 查看配置中远程仓库地址
-git remote add [name] [url]  # 给远程仓库地址命名并添加到配置中
-git remote rm [name]  # 删除配置中指定的远程仓库地址
-git remote set-url --push [name] [newUrl]  # 修改配置中某仓库名称的地址
-git pull [remoteName] [localBranchName]  # 拉取指定的远程仓库到指定分支
-git push [remoteName] [localBranchName]  # 推送指定分支到指定的远程仓库
-git push [remoteName] [localBranchName]:[remoteBranchName]  # 推送本地指定分支到指定的远程分支
-</code>
-分支操作相关
-<code>bash
-git branch # 查看本地分支
-git branch -r # 查看远程分支
-git branch [name] # 创建本地分支，并不切换到新分支
-git checkout [name] # 切换分支
-git checkout -b [name] # 创建新分支并立即切换到新分支
-git branch -d [name] # 删除已经参与合并了的分支，如果想强制删除一个分支，可以使用-D选项
-git merge [name] # 将名称为[name]的分支与当前分支合并
-git push origin [name] # 创建远程分支(本地分支push到远程)
-git push origin :heads/[name] 或 $ git push origin :[name] # 删除远程分支
-</code>
-标签tag操作相关
-<code>bash
-git tag # 查看版本
-git tag [name] # 创建版本
-git tag -d [name] # 删除版本
-git push origin [name] # 创建远程版本(本地版本push到远程)
-git push origin :refs/tags/[name] # 删除远程版本
-git pull origin --tags # 合并远程仓库的tag到本地
-git push origin --tags # 上传本地tag到远程仓库
-git tag -a [name] -m 'yourMessage' # 创建带注释的tag
-</code></p>
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -128,22 +128,15 @@ in
         <div class="row">
           <div class="col-md-offset-2 col-md-8">
             <article>
-  <h2><a href="/blog/2015/06/18/git-install/">Git</a></h2>
+  <h2>
+    <a href="/blog/2015/06/18/git-install/">
+        
+        2015-06-18 Git
+      
+    </a>
+  </h2>
   
-  <p>
-    <h3>git 安装</h3>
-
-<p><code>ubuntu</code>
-<code>bash
-sudo apt-get install git
-sudo apt-get install git-core
-</code>
-<code>mac</code>
-<code>bash
-brew install git
-</code></p>
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -186,7 +179,8 @@ in
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
   <span>
-  Powered by <a href="http://octopress.org/">Octopress</a>. Design based on the lovely <a href="https://github.com/sevenadrian/MediumFox">MediumFox</a>.
+  Copyright &copy; 2016 - Winter -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </span>
 
 </div>
@@ -211,5 +205,12 @@ in
 </script>
 
 
+    <script>
+  window.intercomSettings = {
+    app_id: "n21ct8w3"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/n21ct8w3';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
   </body>
+
 </html>

@@ -9,7 +9,7 @@
   <meta name="author" content="Winter">
 
   
-  <meta name="description" content="All Posts Public Protected Private的微妙的区别 这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。 public 即定义普通的方法，这个不用多说什么，都明白 &hellip;">
+  <meta name="description" content="All Posts 2015-09-02 Public Protected Private的微妙的区别 in ruby 2015-07-31 Function, Lambda, Proc, Blcok的区别 in ruby 2015-06-18 Git Base in git 2015-06- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -23,14 +23,49 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/main.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72353121-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
   <body>
+  	<div class="off-canvas">
+  <figure class="avatar">
+    <img src="/images/avatar.jpeg" alt="Picture" title="That's me, Winter.">
+  </figure>
+  <div class="bio">
+      <h1>Hi, I&#8217;m Winter.</h1>
+      <p></p>
+  </div>
+  <nav>
+    <h6>Follow me on</h6>
+    <div class="social-icon-list">
+    <a title="GitHub" href="https://github.com/winterbang">
+      <img src="/images/glyphicons_social_21_github.png"/>
+    </a>
+    <a title="E-Mail" href="mailto:zwtao90@gmail.com">
+      <img src="/images/glyphicons_social_39_e-mail.png"/>
+    </a>
+  </div>
+  </nav>
+</div>
+
+
     <div class="all-posts">
   <div class="container">
     <div class="row">
@@ -47,43 +82,15 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <article>
-  <h2><a href="/blog/2015/09/02/ruby/">Public Protected Private的微妙的区别</a></h2>
+  <h2>
+    <a href="/blog/2015/09/02/ruby/">
+        
+        2015-09-02 Public Protected Private的微妙的区别
+      
+    </a>
+  </h2>
   
-  <p>
-    <p>这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。</p>
-
-
-
-
-<blockquote><p>public</p></blockquote>
-
-
-
-
-<p>即定义普通的方法，这个不用多说什么，都明白</p>
-
-
-
-
-<blockquote><p>protected</p></blockquote>
-
-
-
-
-<p>它规定的方法的特性介于public和private之间，首先它定义的方法是不对外调用的，所谓的不对外调用就是说你可以在本类的继承链上的任何子类和当前类中调用，它与public相同的是必须又对象来调用不能直接用方法名来执行</p>
-
-
-
-
-<blockquote><p>private</p></blockquote>
-
-
-
-
-<p>说它保守吧也确实，它规定的方法只能在当前类中使用，说它不保守吧，直接使用不用附属对象，默认就是当前对象，确实已经私有了，它的调用者也就确定了</p>
-
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -121,103 +128,15 @@ in
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <article>
-  <h2><a href="/blog/2015/07/31/ruby/">Function, Lambda, Proc, Blcok的区别</a></h2>
+  <h2>
+    <a href="/blog/2015/07/31/ruby/">
+        
+        2015-07-31 Function, Lambda, Proc, Blcok的区别
+      
+    </a>
+  </h2>
   
-  <p>
-    <table>
-<thead>
-<tr>
-<th>对象    </th>
-<th>方法名  </th>
-<th>参数                     </th>
-<th>返回值                          </th>
-<th>执行上下文       </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>function</td>
-<td>有方法名 </td>
-<td>参数（可选，调用时严格匹配）</td>
-<td>有返回值，return跳出当前方法</td>
-<td>任何地方都可以执行</td>
-</tr>
-<tr>
-<td>lambda  </td>
-<td>有块名   </td>
-<td>参数（可选，调用时严格匹配）</td>
-<td>有返回值，return跳出当前块  </td>
-<td>只有在函数体中或调用#call来执行</td>
-</tr>
-<tr>
-<td>proc    </td>
-<td>有块名  </td>
-<td>参数（可选，调用时非严格匹配）</td>
-<td>无返回值，一个执行的过程，return跳出当前作用域</td>
-<td>只有在函数体中或调用#call来执行</td>
-</tr>
-<tr>
-<td>block   </td>
-<td>匿名块  </td>
-<td>参数（可选，调用时非严格匹配）</td>
-<td>无返回值，一个执行的过程，return跳出当前作用域</td>
-<td>只能在函数体中执行</td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-<p>function -> lambda -> proc -> block 是一个越来越抽象的过渡的过程:</p>
-
-
-
-
-<blockquote><p>function</p></blockquote>
-
-
-
-
-<p>对我们来说最比较熟悉的应该是function了，说白了就是数学中的映射，我们传给funciton一个参数，通过内部定义的一些逻辑处理得到一个返回值，从某种意义上来说，我觉得funciton和变量没什么区别，不论是function还是变量，我们从他们中得到的是个对象，只是function返回的对象可以由我们传入的参数动态的操作，其次function与其他的三种的不同是因为有了自己的作用域，定义的内部只能使用当前调用对象有资格去使用的binding，function附属于它自己的归属者。</p>
-
-
-
-
-<blockquote><p>lambda</p></blockquote>
-
-
-
-
-<p>广义上来说lambda，proc，block都是block，广义的block和function的主要区别就是作用域，当然广义的block有自己的作用域，它限制了外部去访问里面的binding，但它没有限制内部去调用外部的binding，当然他们的调用也必须像function一样附属在对象上，只是function在定义的时候就已经知道了他附属的对象，而block需要在执行的时候去绑定他的调用对象且必须在方法中执行，lambda和function的区别也就是广义的block和funciton的区别了。</p>
-
-
-
-
-<blockquote><p>proc</p></blockquote>
-
-
-
-
-<p>比lambda更随意了，它简单的只是个执行过程，没有自己的返回值，就像是浮动着的一块代码，你放哪里执行就在哪里执行一下。</p>
-
-
-
-
-<blockquote><p>block</p></blockquote>
-
-
-
-
-<p>是更纯粹的block了，它连名字都没有了。</p>
-
-
-
-
-<p>小结：function像是一个特别规矩的好孩子，墨守成规的工作着，lambda像是一个有些调皮但还算明事理的孩子，proc就有点不听话了，至于blcok就太过分了自己叫啥都不知道了</p>
-
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -255,104 +174,15 @@ in
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <article>
-  <h2><a href="/blog/2015/06/18/git-base/">Git Base</a></h2>
+  <h2>
+    <a href="/blog/2015/06/18/git-base/">
+        
+        2015-06-18 Git Base
+      
+    </a>
+  </h2>
   
-  <p>
-    <p>起步</p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git init    <span class="c">#git初始化</span>
-</span><span class='line'>git add -A  <span class="c">#添加所有文件到版本控制中</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>远程仓库地址设置相关</p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone git://github.com/winterbang/projectname <span class="c"># 检出仓库</span>
-</span><span class='line'>git remote -v  <span class="c"># 查看配置中远程仓库地址</span>
-</span><span class='line'>git remote add <span class="o">[</span>name<span class="o">]</span> <span class="o">[</span>url<span class="o">]</span>  <span class="c"># 给远程仓库地址命名并添加到配置中</span>
-</span><span class='line'>git remote rm <span class="o">[</span>name<span class="o">]</span>  <span class="c"># 删除配置中指定的远程仓库地址</span>
-</span><span class='line'>git remote <span class="nb">set</span>-url --push <span class="o">[</span>name<span class="o">]</span> <span class="o">[</span>newUrl<span class="o">]</span>  <span class="c"># 修改配置中某仓库名称的地址</span>
-</span><span class='line'>git pull <span class="o">[</span>remoteName<span class="o">]</span> <span class="o">[</span>localBranchName<span class="o">]</span>  <span class="c"># 拉取指定的远程仓库到指定分支</span>
-</span><span class='line'>git push <span class="o">[</span>remoteName<span class="o">]</span> <span class="o">[</span>localBranchName<span class="o">]</span>  <span class="c"># 推送指定分支到指定的远程仓库</span>
-</span><span class='line'>git push <span class="o">[</span>remoteName<span class="o">]</span> <span class="o">[</span>localBranchName<span class="o">]</span>:<span class="o">[</span>remoteBranchName<span class="o">]</span>  <span class="c"># 推送本地指定分支到指定的远程分支</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>分支操作相关</p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch <span class="c"># 查看本地分支</span>
-</span><span class='line'>git branch -r <span class="c"># 查看远程分支</span>
-</span><span class='line'>git branch <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建本地分支，并不切换到新分支</span>
-</span><span class='line'>git checkout <span class="o">[</span>name<span class="o">]</span> <span class="c"># 切换分支</span>
-</span><span class='line'>git checkout -b <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建新分支并立即切换到新分支</span>
-</span><span class='line'>git branch -d <span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除已经参与合并了的分支，如果想强制删除一个分支，可以使用-D选项</span>
-</span><span class='line'>git merge <span class="o">[</span>name<span class="o">]</span> <span class="c"># 将名称为[name]的分支与当前分支合并</span>
-</span><span class='line'>git push origin <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建远程分支(本地分支push到远程)</span>
-</span><span class='line'>git push origin :heads/<span class="o">[</span>name<span class="o">]</span> 或 <span class="nv">$ </span>git push origin :<span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除远程分支</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>标签tag操作相关</p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag <span class="c"># 查看版本</span>
-</span><span class='line'>git tag <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建版本</span>
-</span><span class='line'>git tag -d <span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除版本</span>
-</span><span class='line'>git push origin <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建远程版本(本地版本push到远程)</span>
-</span><span class='line'>git push origin :refs/tags/<span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除远程版本</span>
-</span><span class='line'>git pull origin --tags <span class="c"># 合并远程仓库的tag到本地</span>
-</span><span class='line'>git push origin --tags <span class="c"># 上传本地tag到远程仓库</span>
-</span><span class='line'>git tag -a <span class="o">[</span>name<span class="o">]</span> -m <span class="s1">&#39;yourMessage&#39;</span> <span class="c"># 创建带注释的tag</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -390,42 +220,15 @@ in
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <article>
-  <h2><a href="/blog/2015/06/18/git-install/">Git</a></h2>
+  <h2>
+    <a href="/blog/2015/06/18/git-install/">
+        
+        2015-06-18 Git
+      
+    </a>
+  </h2>
   
-  <p>
-    <h3>git 安装</h3>
-
-
-
-
-<p><code>ubuntu</code></p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install git
-</span><span class='line'>sudo apt-get install git-core
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>
-<code>mac</code></p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew install git
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -463,56 +266,15 @@ in
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <article>
-  <h2><a href="/blog/2015/06/17/ubuntu/">Ubuntu服务器相关－前言</a></h2>
+  <h2>
+    <a href="/blog/2015/06/17/ubuntu/">
+        
+        2015-06-17 Ubuntu服务器相关－前言
+      
+    </a>
+  </h2>
   
-  <p>
-    <p>假设你已经有了一台新的服务器的ip、账号（默认是root）和密码，用ssh登陆后开始以下操作：</p>
-
-
-
-
-<h3>新建用户</h3>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>useradd -m -s /bin/bash  myname
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<h3>把新用户加到<code>sudo</code> 群组</h3>
-
-
-
-
-<h4>只有加到 <code>sudo</code> 群组的用户才能使用sudo命令</h4>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>adduser myname sudo
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<h3>设置新用户密码</h3>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>passwd myname
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -550,128 +312,15 @@ in
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <article>
-  <h2><a href="/blog/2015/06/17/syntax/">Include和extend的使用</a></h2>
+  <h2>
+    <a href="/blog/2015/06/17/syntax/">
+        
+        2015-06-17 Include和extend的使用
+      
+    </a>
+  </h2>
   
-  <p>
-    <p>1.在类定义中引入模块，是模块中的方法成为类的实例方法。这种情况是最常见的，直接 <code>include</code> 即可。</p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Basic</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</span><span class='line'>      <span class="nb">self</span> <span class="o">+</span> <span class="n">number</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="no">Fixnum</span><span class="o">.</span><span class="n">class_eval</span> <span class="k">do</span>
-</span><span class='line'>  <span class="kp">include</span> <span class="no">Basic</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="mi">3</span><span class="o">.</span><span class="n">add</span> <span class="mi">4</span>  <span class="c1">#=&gt; 7 </span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>2.在类定义中引入模块，使模块中的方法成为类的实例方法。这种情况也是比较常见的，直接 <code>extend</code> 即可。</p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">ExtendMe</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">verbal_object_id</span>
-</span><span class='line'>       <span class="s2">&quot;my object id is </span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">object_id</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">Person</span>
-</span><span class='line'>  <span class="kp">extend</span> <span class="no">ExtendMe</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="no">Person</span><span class="o">.</span><span class="n">verbal_object_id</span> <span class="c1">#=&gt; &quot;my object id is 24339630&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>3.有时在类定义中引入模块，既希望引入实例方法，也希望引入类方法，这时需要使用 <code>include</code> ，但是在模块中对类方法的定义有所不同，定义出现在</p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">ExtendThroughInclude</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">included</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
-</span><span class='line'>      <span class="n">klass</span><span class="o">.</span><span class="n">extend</span> <span class="no">ClassMethods</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="k">def</span> <span class="nf">instance_method</span>
-</span><span class='line'>      <span class="s2">&quot;this is an instance method of </span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="k">module</span> <span class="nn">ClassMethods</span>
-</span><span class='line'>      <span class="k">def</span> <span class="nf">class_method</span>
-</span><span class='line'>          <span class="s2">&quot;this is a method on the </span><span class="si">#{</span><span class="nb">self</span><span class="si">}</span><span class="s2"> class&quot;</span>
-</span><span class='line'>      <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">Person</span>
-</span><span class='line'>  <span class="kp">include</span> <span class="no">ExtendThroughInclude</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="no">Person</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1">#=&gt; &quot;this is an instance method Person&quot;</span>
-</span><span class='line'><span class="no">Person</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1">#=&gt; &quot;this is a method on the Person class&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -709,122 +358,15 @@ in
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <article>
-  <h2><a href="/blog/2015/06/17/octopress-commond-line/">Octopress Commond Line</a></h2>
+  <h2>
+    <a href="/blog/2015/06/17/octopress-commond-line/">
+        
+        2015-06-17 Octopress Commond Line
+      
+    </a>
+  </h2>
   
-  <p>
-    <h2>octopress常用命令</h2>
-
-
-
-
-<h3>部署到Github Pages</h3>
-
-
-
-
-<h4><em>生成博文并且部署</em></h4>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p><strong>注</strong>： 指令执行后将会生成博文并复制文件到 <code>_deploy/</code> 目录，然后添加到git， commit、push到master分支。</p>
-
-
-
-
-<h4><em>提交source分支</em></h4>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s1">&#39;message&#39;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<h3>博文相关</h3>
-
-
-
-
-<h4><em>新建帖子</em></h4>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<p>例如：</p>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span><span class="o">]</span>
-</span><span class='line'><span class="c">#Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<h4><em>新建页面</em></h4>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_page<span class="o">[</span>super-awesome<span class="o">]</span>
-</span><span class='line'><span class="c">#creates /source/super-awesome/index.markdown</span>
-</span><span class='line'>
-</span><span class='line'>rake new_page<span class="o">[</span>super-awesome/page.html<span class="o">]</span>
-</span><span class='line'><span class="c">#creates /source/super-awesome/page.html</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<h3><em>生成和预览</em></h3>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate <span class="c"># 在 `public/` 目录中生成帖子和页面</span>
-</span><span class='line'>rake watch <span class="c"># 查看 `source/` 目录和 `sass/` 中的改变并且重新生成</span>
-</span><span class='line'>rake preview <span class="c"># 将页面挂载在webserver的`http://localhost：4000`</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-  </p>
+ 
   <span class="meta">
     
 
@@ -867,7 +409,8 @@ in
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
   <span>
-  Powered by <a href="http://octopress.org/">Octopress</a>. Design based on the lovely <a href="https://github.com/sevenadrian/MediumFox">MediumFox</a>.
+  Copyright &copy; 2016 - Winter -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </span>
 
 </div>
@@ -892,5 +435,12 @@ in
 </script>
 
 
+    <script>
+  window.intercomSettings = {
+    app_id: "n21ct8w3"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/n21ct8w3';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
   </body>
+
 </html>
