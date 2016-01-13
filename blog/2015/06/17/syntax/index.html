@@ -9,7 +9,7 @@
   <meta name="author" content="Winter">
 
   
-  <meta name="description" content="LM Include和extend的使用 written in rails, ruby 1.在类定义中引入模块，是模块中的方法成为类的实例方法。这种情况是最常见的，直接 include 即可。 1
+  <meta name="description" content="Include和extend的使用 written in rails, ruby 1.在类定义中引入模块，是模块中的方法成为类的实例方法。这种情况是最常见的，直接 include 即可。 1
 2
 3
 4
@@ -20,7 +20,7 @@
 9
 10
 11
-module Basic def add(number &hellip;">
+module Basic def add(number) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -55,6 +55,18 @@ module Basic def add(number &hellip;">
 </head>
 
   <body>
+    <header>
+      <div class="h-wrap">
+        <h1 class="title">
+          <a href="/" title="Back to Homepage">
+            Winter
+          </a>
+        </h1>
+        <a class="menu-icon" title="Open Bio">
+          <span class="lines"></span>
+        </a>
+      </div>
+    </header>
   	<div class="off-canvas">
   <figure class="avatar">
     <img src="/images/avatar.jpeg" alt="Picture" title="That's me, Winter.">
@@ -80,11 +92,7 @@ module Basic def add(number &hellip;">
 </div>
 
 
-    <a href="/" class="home-icon grow">
-  <p>LM</p>
-</a>
-
-<article role="article" class="full-single-article">
+    <article role="article" class="full-single-article">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
