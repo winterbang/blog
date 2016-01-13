@@ -1,7 +1,7 @@
 window.onload = function() {
 
     var $menuIcon = document.getElementsByClassName('menu-icon')[0],
-        $offCanva = document.getElementsByClassName('off-canvas')[0];
+        $offCanva = document.getElementsByClassName('off-canvas')[0],
         $siteWrap = document.getElementsByClassName('site-wrapper')[0];
 
     $menuIcon.addEventListener('click', function() {
@@ -30,15 +30,14 @@ window.onload = function() {
     }
 
     function toggleClass(element, className) {
-        if (!element || !className) {
-            return;
-        }
-
-        if (element.className.indexOf(className) === -1) {
-            addClass(element, className);
-        } else {
-            removeClass(element, className);
-        }
+      if (!element || !className) {
+          return;
+      }
+      if (element.className.indexOf(className) === -1) {
+          addClass(element, className);
+      } else {
+          removeClass(element, className);
+      }
     }
 
     // Open Twitter/share in a Pop-Up
@@ -46,21 +45,22 @@ window.onload = function() {
     if (!$popup) {
         return;
     }
-    $popup.addEventListener('click', function(e) {
-        e.preventDefault()
-        var width  = 575,
-            height = 400,
-            left   = (document.documentElement.clientWidth  - width)  / 2,
-            top    = (document.documentElement.clientHeight - height) / 2,
-            url    = this.href,
-            opts   = 'status=1' +
-                     ',width='  + width  +
-                     ',height=' + height +
-                     ',top='    + top    +
-                     ',left='   + left;
+  $popup.addEventListener('click', function(e) {
+      e.preventDefault()
+      var width  = 575,
+          height = 400,
+          left   = (document.documentElement.clientWidth  - width)  / 2,
+          top    = (document.documentElement.clientHeight - height) / 2,
+          url    = this.href,
+          opts   = 'status=1' +
+                   ',width='  + width  +
+                   ',height=' + height +
+                   ',top='    + top    +
+                   ',left='   + left;
 
-        window.open(url, 'twitter', opts);
+      window.open(url, 'twitter', opts);
 
-        return false;
-    });
+      return false;
+  });
+
 }

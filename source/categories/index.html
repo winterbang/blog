@@ -5,15 +5,25 @@ date: 2016-01-13 17:24
 footer: true
 ---
 <div class="home-page">
-
+  <div class="picBox">
+    <ul class="picL" id="picLsy" >
+      {% for category in site.categories %}
+      <li>
+        <a href="#"><img src="/images/{{ category | first}}.jpg" alt="" width="200" height="150"/></a>
+        <div class="text">
+          <b>科技</b>
+          <p>{{ category | first | category_link }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
   <div class="article-list">
     <div class="container">
       {% for category in site.categories %}
-        <div class="row">
-          <div class="col-md-offset-2 col-md-8">
+          <div class="">
             {{ category | first | category_link }}
           </div>
-        </div>
       {% endfor %}
     </div>
   </div>
