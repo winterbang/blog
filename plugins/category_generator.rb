@@ -178,13 +178,6 @@ ERR
       result << date.strftime('<span class="year">%Y</span> ')
       result
     end
-
-    def tag_link(category)
-      dir = @context.registers[:site].config['category_dir']
-      [1, 2, 5].sample
-      "<a class='category tagc#{[1, 2, 5].sample}' href='/#{dir}/#{category.to_url}/' >#{category}</a>"
-    end
-
   end
 
 end

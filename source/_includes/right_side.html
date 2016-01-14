@@ -3,23 +3,26 @@
     <img src="/images/avatar.jpeg" alt="Picture" title="That's me, {{ site.author }}.">
   </figure>
   <div class="bio">
-      <h1>Hi, I'm {{ site.author }}.</h1>
-      <p>{{ site.author-bio }}</p>
+    <h1>Hi, I'm {{ site.author }}.</h1>
+    <p>{{ site.author_bio }}</p>
   </div>
   <nav>
     <h6>Follow me on</h6>
     <div class="social-icon-list">
-      <a title="GitHub" href="https://github.com/winterbang" target="_blank">
-        <img src="/images/glyphicons_social_21_github.png"/>
+      <a title="GitHub" href="https://github.com/{{ site.github_user }}" target="_blank" alt="GitHub">
+        <i class="fa fa-github fa-3x"></i>
       </a>
-      <a title="E-Mail" href="mailto:zwtao90@gmail.com" target="_blank">
-        <img src="/images/glyphicons_social_39_e-mail.png"/>
+      <a title="E-Mail" href="mailto:{{ site.email.address }}" target="_blank" alt="E-Mail">
+        <i class="fa fa-envelope-o fa-3x"></i>
       </a>
     </div>
   </nav>
-  <nav>
-    <a href="/{{ site.category_dir }}">分类</a>
-  </nav>
+  <ul class="dirctory">
+    <li>
+      <i class="fa fa-tags fa-1x"></i>
+      <a href="/{{ site.category_dir }}">分类</a>
+    </li>
+  </ul>
 </div>
 
 
