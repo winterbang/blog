@@ -18,7 +18,16 @@ single: true
     </div>
   </div>
 </article>
-
+<div class="post-tags">
+  <div class="container">
+    {% if category != '0' %}
+      <span class="tag">
+        <i class="fa fa-tag"></i>
+        {{ page.categories | category_links }}
+      </span>
+    {% endif %}
+  </div>
+</div>
 <hr class="divider-short"/>
 
 <div class="archive-link">

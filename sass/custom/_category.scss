@@ -32,7 +32,7 @@
       height: 149px;
       top: 149px;
       left: 0;
-      font-family: 'Î¢ÈíÑÅºÚ','ºÚÌå';
+      font-family: $header-subtitle-font-family;
       b {
         background: #ca2c2a;
         padding: 5px 15px;
@@ -56,3 +56,8 @@
     }
   }
 }
+
+.post-tags {
+  text-align: center
+}
+
