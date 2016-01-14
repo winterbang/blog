@@ -65,7 +65,3 @@ var right_side = function() {
 
 }
 
-window.onload = function(){
-
-  right_side();
-}
