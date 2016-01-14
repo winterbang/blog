@@ -31,6 +31,7 @@ module Basic def add(number) &hellip;">
   
   <link rel="canonical" href="http://www.rails.pub/blog/2015/06/17/syntax">
   <link href="/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -72,23 +73,26 @@ module Basic def add(number) &hellip;">
     <img src="/images/avatar.jpeg" alt="Picture" title="That's me, Winter.">
   </figure>
   <div class="bio">
-      <h1>Hi, I&#8217;m Winter.</h1>
-      <p></p>
+    <h1>Hi, I&#8217;m Winter.</h1>
+    <p>肚子里藏着一颗文艺心的无节操有上限的屌丝骚年</p>
   </div>
   <nav>
     <h6>Follow me on</h6>
     <div class="social-icon-list">
-      <a title="GitHub" href="https://github.com/winterbang" target="_blank">
-        <img src="/images/glyphicons_social_21_github.png"/>
+      <a title="GitHub" href="https://github.com/winterbang" target="_blank" alt="GitHub">
+        <i class="fa fa-github fa-3x"></i>
       </a>
-      <a title="E-Mail" href="mailto:zwtao90@gmail.com" target="_blank">
-        <img src="/images/glyphicons_social_39_e-mail.png"/>
+      <a title="E-Mail" href="mailto:zwtao90@gmail.com" target="_blank" alt="E-Mail">
+        <i class="fa fa-envelope-o fa-3x"></i>
       </a>
     </div>
   </nav>
-  <nav>
-    <a href="/categories">分类</a>
-  </nav>
+  <ul class="dirctory">
+    <li>
+      <i class="fa fa-tags fa-1x"></i>
+      <a href="/categories">分类</a>
+    </li>
+  </ul>
 </div>
 
 
@@ -267,7 +271,7 @@ in
 </div>
 
 
-    <footer id="footer" class="her-row">
+    <footer id="footer">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
