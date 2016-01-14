@@ -9,23 +9,15 @@ footer: true
     <ul class="picL" id="picLsy" >
       {% for category in site.categories %}
       <li>
-        <a href="#"><img src="/images/{{ category | first}}.jpg" alt="" width="200" height="150"/></a>
-        <div class="text">
-          <b>科技</b>
-          <p>{{ category | first | category_link }}</p>
-        </div>
+        <a href="/{{ site.category_dir }}/{{ category | first }}">
+          <img src="/images/{{ category | first }}.jpg" alt="" width="200" height="150"/>
+        </a>
+        <a class="text" href="/{{ site.category_dir }}/{{ category | first }}">
+          <b>{{ category | first }}</b>
+        </a>
       </li>
       {% endfor %}
     </ul>
-  </div>
-  <div class="article-list">
-    <div class="container">
-      {% for category in site.categories %}
-          <div class="">
-            {{ category | first | category_link }}
-          </div>
-      {% endfor %}
-    </div>
   </div>
 </div>
 
