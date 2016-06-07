@@ -1,4 +1,5 @@
-source "https://ruby.taobao.org"
+# source "https://ruby.taobao.org"
+source "https://rubygems.org/"
 
 group :development do
   gem 'octopress', '~> 3.0'
