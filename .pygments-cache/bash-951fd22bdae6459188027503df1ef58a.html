@@ -1,0 +1,10 @@
+<div class="highlight"><pre>git branch <span class="c"># 查看本地分支</span>
+git branch -r <span class="c"># 查看远程分支</span>
+git branch <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建本地分支，并不切换到新分支</span>
+git checkout <span class="o">[</span>name<span class="o">]</span> <span class="c"># 切换分支</span>
+git checkout -b <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建新分支并立即切换到新分支</span>
+git branch -d <span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除已经参与合并了的分支，如果想强制删除一个分支，可以使用-D选项</span>
+git merge <span class="o">[</span>name<span class="o">]</span> <span class="c"># 将名称为[name]的分支与当前分支合并</span>
+git push origin <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建远程分支(本地分支push到远程)</span>
+git push origin :heads/<span class="o">[</span>name<span class="o">]</span> 或 <span class="nv">$ </span>git push origin :<span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除远程分支</span>
+</pre></div>

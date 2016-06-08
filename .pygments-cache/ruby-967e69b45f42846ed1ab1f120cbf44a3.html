@@ -1,0 +1,23 @@
+<div class="highlight"><pre><span class="k">module</span> <span class="nn">ExtendThroughInclude</span>
+	<span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">included</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
+		<span class="n">klass</span><span class="o">.</span><span class="n">extend</span> <span class="no">ClassMethods</span>
+	<span class="k">end</span>
+	
+	<span class="k">def</span> <span class="nf">instance_method</span>
+		<span class="s2">&quot;this is an instance method of </span><span class="si">#{</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="si">}</span><span class="s2">&quot;</span>
+	<span class="k">end</span>
+	
+	<span class="k">module</span> <span class="nn">ClassMethods</span>
+		<span class="k">def</span> <span class="nf">class_method</span>
+			<span class="s2">&quot;this is a method on the </span><span class="si">#{</span><span class="nb">self</span><span class="si">}</span><span class="s2"> class&quot;</span>
+		<span class="k">end</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Person</span>
+	<span class="kp">include</span> <span class="no">ExtendThroughInclude</span>
+<span class="k">end</span>
+
+<span class="no">Person</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1">#=&gt; &quot;this is an instance method Person&quot;</span>
+<span class="no">Person</span><span class="o">.</span><span class="n">new</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1">#=&gt; &quot;this is a method on the Person class&quot;</span>
+</pre></div>
