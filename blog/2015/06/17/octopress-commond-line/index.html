@@ -1,0 +1,350 @@
+
+<!--
+             _           _                   _           _       _
+            (_)         | |                 ( )         | |     | |
+ __      __  _   _ __   | |_    ___   _ __  |/   ___    | |__   | |   ___     __ _
+ \ \ /\ / / | | | '_ \  | __|  / _ \ | '__|     / __|   | '_ \  | |  / _ \   / _` |
+  \ V  V /  | | | | | | | |_  |  __/ | |        \__ \   | |_) | | | | (_) | | (_| |
+   \_/\_/   |_| |_| |_|  \__|  \___| |_|        |___/   |_.__/  |_|  \___/   \__, |
+                                                                              __/ |
+                                                                             |___/
+
+===================================================================================
+
+-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress Commond Line - Winter&#8217;Blog</title>
+  <meta name="author" content="Winter">
+
+  
+  <meta name="description" content="Octopress Commond Line written in octopress octopress常用命令 部署到Github Pages 生成博文并且部署 1
+2
+rake generate
+rake deploy 注： 指令执行后将会生成博文并复制文件到 _deploy/ 目录， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.rails.pub/blog/2015/06/17/octopress-commond-line">
+  <link href="/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/right_side.js"></script>
+  <script src="/javascripts/tagsclound.js"></script>
+  <script src="/javascripts/main.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72353121-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body>
+    <header>
+      <div class="h-wrap">
+        <h1 class="title">
+          <a href="/" title="Back to Homepage">
+            Winter&#8217;Blog
+          </a>
+        </h1>
+        <a class="menu-icon" title="Open Bio">
+          <span class="lines"></span>
+        </a>
+      </div>
+    </header>
+  	<div class="off-canvas">
+  <figure class="avatar">
+    <img src="/images/avatar.jpeg" alt="Picture" title="That's me, Winter.">
+  </figure>
+  <div class="bio">
+    <h1>Hi, I&#8217;m Winter.</h1>
+    <p>肚子里藏着一颗文艺心的无节操有上限的屌丝骚年</p>
+  </div>
+  <nav>
+    <h6>Follow me on</h6>
+    <div class="social-icon-list">
+      <a title="GitHub" href="https://github.com/winterbang" target="_blank" alt="GitHub">
+        <i class="fa fa-github fa-3x"></i>
+      </a>
+      <a title="E-Mail" href="mailto:zwtao90@gmail.com" target="_blank" alt="E-Mail">
+        <i class="fa fa-envelope-o fa-3x"></i>
+      </a>
+    </div>
+  </nav>
+  <ul class="dirctory">
+    <li>
+      <i class="fa fa-tags fa-1x"></i>
+      <a href="/categories">分类</a>
+    </li>
+  </ul>
+  <div id="tagscloud">
+  
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc2' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc2' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc1' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc5' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc2' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc5' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc5' href='/categories/git/' >git</a>
+  
+</div>
+
+
+</div>
+
+
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Octopress Commond Line</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-06-17T12:03:26+08:00" pubdate data-updated="true"></time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+        </div>
+        <h2>octopress常用命令</h2>
+
+<h3>部署到Github Pages</h3>
+
+<h4><em>生成博文并且部署</em></h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>注</strong>： 指令执行后将会生成博文并复制文件到 <code>_deploy/</code> 目录，然后添加到git， commit、push到master分支。</p>
+
+<h4><em>提交source分支</em></h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s1">&#39;message&#39;</span>
+</span><span class='line'>git push origin <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>博文相关</h3>
+
+<h4><em>新建帖子</em></h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>例如：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;Zombie Ninjas Attack: A survivor&#39;s retrospective&quot;</span><span class="o">]</span>
+</span><span class='line'><span class="c">#Creates source/_posts/2011-07-03-zombie-ninjas-attack-a-survivors-retrospective.markdown</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4><em>新建页面</em></h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_page<span class="o">[</span>super-awesome<span class="o">]</span>
+</span><span class='line'><span class="c">#creates /source/super-awesome/index.markdown</span>
+</span><span class='line'>
+</span><span class='line'>rake new_page<span class="o">[</span>super-awesome/page.html<span class="o">]</span>
+</span><span class='line'><span class="c">#creates /source/super-awesome/page.html</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3><em>生成和预览</em></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate <span class="c"># 在 `public/` 目录中生成帖子和页面</span>
+</span><span class='line'>rake watch <span class="c"># 查看 `source/` 目录和 `sass/` 中的改变并且重新生成</span>
+</span><span class='line'>rake preview <span class="c"># 将页面挂载在webserver的`http://localhost：4000`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+      </div>
+    </div>
+  </div>
+</article>
+<div class="post-tags">
+  <div class="container">
+    
+      <span class="tag">
+        <i class="fa fa-tag"></i>
+        <a class='category' href='/categories/octopress/'>octopress</a>
+      </span>
+    
+  </div>
+</div>
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+
+        
+          <a class="pull-right" href="/blog/2015/06/17/syntax/" title="Next Post: include和extend的使用">Next: include和extend的使用 &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="comments">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <section>
+        <h3>Comments</h3>
+        <div id="disqus_thread" aria-live="polite">
+          <noscript>Please enable JavasScript to view the comments.</noscript>
+        </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+  <span>
+  Copyright &copy; 2016 - Winter -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</span>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'winterbang';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.rails.pub/blog/2015/06/17/octopress-commond-line/';
+        var disqus_url = 'http://www.rails.pub/blog/2015/06/17/octopress-commond-line/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,345 @@
+
+<!--
+             _           _                   _           _       _
+            (_)         | |                 ( )         | |     | |
+ __      __  _   _ __   | |_    ___   _ __  |/   ___    | |__   | |   ___     __ _
+ \ \ /\ / / | | | '_ \  | __|  / _ \ | '__|     / __|   | '_ \  | |  / _ \   / _` |
+  \ V  V /  | | | | | | | |_  |  __/ | |        \__ \   | |_) | | | | (_) | | (_| |
+   \_/\_/   |_| |_| |_|  \__|  \___| |_|        |___/   |_.__/  |_|  \___/   \__, |
+                                                                              __/ |
+                                                                             |___/
+
+===================================================================================
+
+-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Function, Lambda, Proc, Blcok的区别 - Winter&#8217;Blog</title>
+  <meta name="author" content="Winter">
+
+  
+  <meta name="description" content="Function, Lambda, Proc, Blcok的区别 written in ruby 对象 方法名 参数 返回值 执行上下文 function
+有方法名 参数（可选，调用时严格匹配）
+有返回值，return跳出当前方法
+任何地方都可以执行 lambda 有块名 参数（可选， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.rails.pub/blog/2015/07/31/ruby">
+  <link href="/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/right_side.js"></script>
+  <script src="/javascripts/tagsclound.js"></script>
+  <script src="/javascripts/main.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72353121-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body>
+    <header>
+      <div class="h-wrap">
+        <h1 class="title">
+          <a href="/" title="Back to Homepage">
+            Winter&#8217;Blog
+          </a>
+        </h1>
+        <a class="menu-icon" title="Open Bio">
+          <span class="lines"></span>
+        </a>
+      </div>
+    </header>
+  	<div class="off-canvas">
+  <figure class="avatar">
+    <img src="/images/avatar.jpeg" alt="Picture" title="That's me, Winter.">
+  </figure>
+  <div class="bio">
+    <h1>Hi, I&#8217;m Winter.</h1>
+    <p>肚子里藏着一颗文艺心的无节操有上限的屌丝骚年</p>
+  </div>
+  <nav>
+    <h6>Follow me on</h6>
+    <div class="social-icon-list">
+      <a title="GitHub" href="https://github.com/winterbang" target="_blank" alt="GitHub">
+        <i class="fa fa-github fa-3x"></i>
+      </a>
+      <a title="E-Mail" href="mailto:zwtao90@gmail.com" target="_blank" alt="E-Mail">
+        <i class="fa fa-envelope-o fa-3x"></i>
+      </a>
+    </div>
+  </nav>
+  <ul class="dirctory">
+    <li>
+      <i class="fa fa-tags fa-1x"></i>
+      <a href="/categories">分类</a>
+    </li>
+  </ul>
+  <div id="tagscloud">
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc5' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc1' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc2' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc2' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc1' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc2' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc5' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc5' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc5' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc5' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc5' href='/categories/git/' >git</a>
+  
+</div>
+
+
+</div>
+
+
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Function, Lambda, Proc, Blcok的区别</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-07-31T22:59:17+08:00" pubdate data-updated="true"></time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+        </div>
+        <table>
+<thead>
+<tr>
+<th>对象    </th>
+<th>方法名  </th>
+<th>参数                     </th>
+<th>返回值                          </th>
+<th>执行上下文       </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>function</td>
+<td>有方法名 </td>
+<td>参数（可选，调用时严格匹配）</td>
+<td>有返回值，return跳出当前方法</td>
+<td>任何地方都可以执行</td>
+</tr>
+<tr>
+<td>lambda  </td>
+<td>有块名   </td>
+<td>参数（可选，调用时严格匹配）</td>
+<td>有返回值，return跳出当前块  </td>
+<td>只有在函数体中或调用#call来执行</td>
+</tr>
+<tr>
+<td>proc    </td>
+<td>有块名  </td>
+<td>参数（可选，调用时非严格匹配）</td>
+<td>无返回值，一个执行的过程，return跳出当前作用域</td>
+<td>只有在函数体中或调用#call来执行</td>
+</tr>
+<tr>
+<td>block   </td>
+<td>匿名块  </td>
+<td>参数（可选，调用时非严格匹配）</td>
+<td>无返回值，一个执行的过程，return跳出当前作用域</td>
+<td>只能在函数体中执行</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>function -> lambda -> proc -> block 是一个越来越抽象的过渡的过程:</p>
+
+<blockquote><p>function</p></blockquote>
+
+<p>对我们来说最比较熟悉的应该是function了，说白了就是数学中的映射，我们传给funciton一个参数，通过内部定义的一些逻辑处理得到一个返回值，从某种意义上来说，我觉得funciton和变量没什么区别，不论是function还是变量，我们从他们中得到的是个对象，只是function返回的对象可以由我们传入的参数动态的操作，其次function与其他的三种的不同是因为有了自己的作用域，定义的内部只能使用当前调用对象有资格去使用的binding，function附属于它自己的归属者。</p>
+
+<blockquote><p>lambda</p></blockquote>
+
+<p>广义上来说lambda，proc，block都是block，广义的block和function的主要区别就是作用域，当然广义的block有自己的作用域，它限制了外部去访问里面的binding，但它没有限制内部去调用外部的binding，当然他们的调用也必须像function一样附属在对象上，只是function在定义的时候就已经知道了他附属的对象，而block需要在执行的时候去绑定他的调用对象且必须在方法中执行，lambda和function的区别也就是广义的block和funciton的区别了。</p>
+
+<blockquote><p>proc</p></blockquote>
+
+<p>比lambda更随意了，它简单的只是个执行过程，没有自己的返回值，就像是浮动着的一块代码，你放哪里执行就在哪里执行一下。</p>
+
+<blockquote><p>block</p></blockquote>
+
+<p>是更纯粹的block了，它连名字都没有了。</p>
+
+<p>小结：function像是一个特别规矩的好孩子，墨守成规的工作着，lambda像是一个有些调皮但还算明事理的孩子，proc就有点不听话了，至于blcok就太过分了自己叫啥都不知道了</p>
+
+      </div>
+    </div>
+  </div>
+</article>
+<div class="post-tags">
+  <div class="container">
+    
+      <span class="tag">
+        <i class="fa fa-tag"></i>
+        <a class='category' href='/categories/ruby/'>ruby</a>
+      </span>
+    
+  </div>
+</div>
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2015/06/18/git-base/" title="Previous Post: git base">&laquo; Previous: git base</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2015/09/02/ruby/" title="Next Post: public protected private的微妙的区别">Next: public protected private的微妙的区别 &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="comments">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <section>
+        <h3>Comments</h3>
+        <div id="disqus_thread" aria-live="polite">
+          <noscript>Please enable JavasScript to view the comments.</noscript>
+        </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+  <span>
+  Copyright &copy; 2016 - Winter -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</span>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'winterbang';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.rails.pub/blog/2015/07/31/ruby/';
+        var disqus_url = 'http://www.rails.pub/blog/2015/07/31/ruby/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </body>
+
+</html>

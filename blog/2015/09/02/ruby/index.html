@@ -18,11 +18,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Winter&#8217;Blog</title>
+  <title>Public Protected Private的微妙的区别 - Winter&#8217;Blog</title>
   <meta name="author" content="Winter">
 
   
-  <meta name="description" content="2015 年 09月 02日 - public protected private的微妙的区别 07月 31日 - function, lambda, proc, blcok的区别 06月 18日 - git base 06月 18日 - git 06月 17日 - ubuntu服务器相关－前言 &hellip;">
+  <meta name="description" content="Public Protected Private的微妙的区别 written in ruby 这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。 public 即定义普通的方法，这个不用多说什么，都明白 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -31,7 +31,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.rails.pub">
+  <link rel="canonical" href="http://www.rails.pub/blog/2015/09/02/ruby">
   <link href="/favicon.png" rel="icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -101,22 +101,33 @@
   
     <a class='category tagc2' href='/categories/octopress/' >octopress</a>
   
-    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
   
     <a class='category tagc2' href='/categories/rails/' >rails</a>
   
-    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
   
     <a class='category tagc5' href='/categories/git/' >git</a>
   
   
-    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc5' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc2' href='/categories/octopress/' >octopress</a>
   
     <a class='category tagc5' href='/categories/ruby/' >ruby</a>
   
     <a class='category tagc5' href='/categories/rails/' >rails</a>
   
-    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+    <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
   
     <a class='category tagc5' href='/categories/git/' >git</a>
   
@@ -127,30 +138,19 @@
   
     <a class='category tagc2' href='/categories/rails/' >rails</a>
   
-    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
   
-    <a class='category tagc2' href='/categories/git/' >git</a>
+    <a class='category tagc1' href='/categories/git/' >git</a>
   
   
-    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+    <a class='category tagc2' href='/categories/octopress/' >octopress</a>
   
-    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
   
     <a class='category tagc2' href='/categories/rails/' >rails</a>
   
     <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
   
-    <a class='category tagc5' href='/categories/git/' >git</a>
-  
-  
-    <a class='category tagc2' href='/categories/octopress/' >octopress</a>
-  
-    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
-  
-    <a class='category tagc5' href='/categories/rails/' >rails</a>
-  
-    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
-  
     <a class='category tagc2' href='/categories/git/' >git</a>
   
 </div>
@@ -160,109 +160,97 @@
 
 
 
-    <div class="home-page">
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Public Protected Private的微妙的区别</h1>
+        <div class="meta">
+          written 
 
-  <div class="article-list">
-    <div class="container">
-      
-      
 
-        
 
-        
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-09-02T20:30:15+08:00" pubdate data-updated="true"></time>
           
-          
-            
-          
 
-          <h3>2015 年</h3>
-          <ul>
-        
-          <li>
-            <time datetime="2015-09-02T20:30:15+08:00" pubdate>
-              <span class='month'>09月</span> <span class='day'>02日</span>
-            </time>
-            -
-            <a href="/blog/2015/09/02/ruby/">public protected private的微妙的区别</a>
-          </li>
-      
+in
+<span class="categories">
+  
+    <a class='category' href='/categories/ruby/'>ruby</a>
+  
+</span>
 
-        
 
-        
-          <li>
-            <time datetime="2015-07-31T22:59:17+08:00" pubdate>
-              <span class='month'>07月</span> <span class='day'>31日</span>
-            </time>
-            -
-            <a href="/blog/2015/07/31/ruby/">function, lambda, proc, blcok的区别</a>
-          </li>
-      
+        </div>
+        <p>这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。</p>
 
-        
+<blockquote><p>public</p></blockquote>
 
-        
-          <li>
-            <time datetime="2015-06-18T11:13:48+08:00" pubdate>
-              <span class='month'>06月</span> <span class='day'>18日</span>
-            </time>
-            -
-            <a href="/blog/2015/06/18/git-base/">git base</a>
-          </li>
-      
+<p>即定义普通的方法，这个不用多说什么，都明白</p>
 
-        
+<blockquote><p>protected</p></blockquote>
 
-        
-          <li>
-            <time datetime="2015-06-18T11:00:24+08:00" pubdate>
-              <span class='month'>06月</span> <span class='day'>18日</span>
-            </time>
-            -
-            <a href="/blog/2015/06/18/git-install/">git</a>
-          </li>
-      
+<p>它规定的方法的特性介于public和private之间，首先它定义的方法是不对外调用的，所谓的不对外调用就是说你可以在本类的继承链上的任何子类和当前类中调用，它与public相同的是必须又对象来调用不能直接用方法名来执行</p>
 
-        
+<blockquote><p>private</p></blockquote>
 
-        
-          <li>
-            <time datetime="2015-06-17T14:25:09+08:00" pubdate>
-              <span class='month'>06月</span> <span class='day'>17日</span>
-            </time>
-            -
-            <a href="/blog/2015/06/17/ubuntu/">ubuntu服务器相关－前言</a>
-          </li>
-      
+<p>说它保守吧也确实，它规定的方法只能在当前类中使用，说它不保守吧，直接使用不用附属对象，默认就是当前对象，确实已经私有了，它的调用者也就确定了</p>
 
-        
-
-        
-          <li>
-            <time datetime="2015-06-17T12:08:58+08:00" pubdate>
-              <span class='month'>06月</span> <span class='day'>17日</span>
-            </time>
-            -
-            <a href="/blog/2015/06/17/syntax/">include和extend的使用</a>
-          </li>
-      
-
-        
-
-        
-          <li>
-            <time datetime="2015-06-17T12:03:26+08:00" pubdate>
-              <span class='month'>06月</span> <span class='day'>17日</span>
-            </time>
-            -
-            <a href="/blog/2015/06/17/octopress-commond-line/">octopress commond line</a>
-          </li>
-      
-
+      </div>
     </div>
   </div>
-
+</article>
+<div class="post-tags">
+  <div class="container">
+    
+      <span class="tag">
+        <i class="fa fa-tag"></i>
+        <a class='category' href='/categories/ruby/'>ruby</a>
+      </span>
+    
+  </div>
 </div>
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2015/07/31/ruby/" title="Previous Post: function, lambda, proc, blcok的区别">&laquo; Previous: function, lambda, proc, blcok的区别</a>
+        
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="comments">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <section>
+        <h3>Comments</h3>
+        <div id="disqus_thread" aria-live="polite">
+          <noscript>Please enable JavasScript to view the comments.</noscript>
+        </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <footer id="footer">
   <div class="container">
@@ -285,7 +273,10 @@
       var disqus_shortname = 'winterbang';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.rails.pub/blog/2015/09/02/ruby/';
+        var disqus_url = 'http://www.rails.pub/blog/2015/09/02/ruby/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

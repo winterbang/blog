@@ -1,0 +1,364 @@
+
+<!--
+             _           _                   _           _       _
+            (_)         | |                 ( )         | |     | |
+ __      __  _   _ __   | |_    ___   _ __  |/   ___    | |__   | |   ___     __ _
+ \ \ /\ / / | | | '_ \  | __|  / _ \ | '__|     / __|   | '_ \  | |  / _ \   / _` |
+  \ V  V /  | | | | | | | |_  |  __/ | |        \__ \   | |_) | | | | (_) | | (_| |
+   \_/\_/   |_| |_| |_|  \__|  \___| |_|        |___/   |_.__/  |_|  \___/   \__, |
+                                                                              __/ |
+                                                                             |___/
+
+===================================================================================
+
+-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Git Base - Winter&#8217;Blog</title>
+  <meta name="author" content="Winter">
+
+  
+  <meta name="description" content="Git Base written in git 起步 1
+2
+git init #git初始化
+git add -A #添加所有文件到版本控制中 远程仓库地址设置相关 1
+2
+3
+4
+5
+6
+7
+8
+git clone git://github.com/winterbang/ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.rails.pub/blog/2015/06/18/git-base">
+  <link href="/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Winter'Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/right_side.js"></script>
+  <script src="/javascripts/tagsclound.js"></script>
+  <script src="/javascripts/main.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72353121-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body>
+    <header>
+      <div class="h-wrap">
+        <h1 class="title">
+          <a href="/" title="Back to Homepage">
+            Winter&#8217;Blog
+          </a>
+        </h1>
+        <a class="menu-icon" title="Open Bio">
+          <span class="lines"></span>
+        </a>
+      </div>
+    </header>
+  	<div class="off-canvas">
+  <figure class="avatar">
+    <img src="/images/avatar.jpeg" alt="Picture" title="That's me, Winter.">
+  </figure>
+  <div class="bio">
+    <h1>Hi, I&#8217;m Winter.</h1>
+    <p>肚子里藏着一颗文艺心的无节操有上限的屌丝骚年</p>
+  </div>
+  <nav>
+    <h6>Follow me on</h6>
+    <div class="social-icon-list">
+      <a title="GitHub" href="https://github.com/winterbang" target="_blank" alt="GitHub">
+        <i class="fa fa-github fa-3x"></i>
+      </a>
+      <a title="E-Mail" href="mailto:zwtao90@gmail.com" target="_blank" alt="E-Mail">
+        <i class="fa fa-envelope-o fa-3x"></i>
+      </a>
+    </div>
+  </nav>
+  <ul class="dirctory">
+    <li>
+      <i class="fa fa-tags fa-1x"></i>
+      <a href="/categories">分类</a>
+    </li>
+  </ul>
+  <div id="tagscloud">
+  
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc2' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc2' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc1' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc2' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc2' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc1' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc5' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc1' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc1' href='/categories/git/' >git</a>
+  
+</div>
+
+
+</div>
+
+
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Git Base</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-06-18T11:13:48+08:00" pubdate data-updated="true"></time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/categories/git/'>git</a>
+  
+</span>
+
+
+        </div>
+        <p>起步</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git init    <span class="c">#git初始化</span>
+</span><span class='line'>git add -A  <span class="c">#添加所有文件到版本控制中</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>远程仓库地址设置相关</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone git://github.com/winterbang/projectname <span class="c"># 检出仓库</span>
+</span><span class='line'>git remote -v  <span class="c"># 查看配置中远程仓库地址</span>
+</span><span class='line'>git remote add <span class="o">[</span>name<span class="o">]</span> <span class="o">[</span>url<span class="o">]</span>  <span class="c"># 给远程仓库地址命名并添加到配置中</span>
+</span><span class='line'>git remote rm <span class="o">[</span>name<span class="o">]</span>  <span class="c"># 删除配置中指定的远程仓库地址</span>
+</span><span class='line'>git remote <span class="nb">set</span>-url --push <span class="o">[</span>name<span class="o">]</span> <span class="o">[</span>newUrl<span class="o">]</span>  <span class="c"># 修改配置中某仓库名称的地址</span>
+</span><span class='line'>git pull <span class="o">[</span>remoteName<span class="o">]</span> <span class="o">[</span>localBranchName<span class="o">]</span>  <span class="c"># 拉取指定的远程仓库到指定分支</span>
+</span><span class='line'>git push <span class="o">[</span>remoteName<span class="o">]</span> <span class="o">[</span>localBranchName<span class="o">]</span>  <span class="c"># 推送指定分支到指定的远程仓库</span>
+</span><span class='line'>git push <span class="o">[</span>remoteName<span class="o">]</span> <span class="o">[</span>localBranchName<span class="o">]</span>:<span class="o">[</span>remoteBranchName<span class="o">]</span>  <span class="c"># 推送本地指定分支到指定的远程分支</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>分支操作相关</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch <span class="c"># 查看本地分支</span>
+</span><span class='line'>git branch -r <span class="c"># 查看远程分支</span>
+</span><span class='line'>git branch <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建本地分支，并不切换到新分支</span>
+</span><span class='line'>git checkout <span class="o">[</span>name<span class="o">]</span> <span class="c"># 切换分支</span>
+</span><span class='line'>git checkout -b <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建新分支并立即切换到新分支</span>
+</span><span class='line'>git branch -d <span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除已经参与合并了的分支，如果想强制删除一个分支，可以使用-D选项</span>
+</span><span class='line'>git merge <span class="o">[</span>name<span class="o">]</span> <span class="c"># 将名称为[name]的分支与当前分支合并</span>
+</span><span class='line'>git push origin <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建远程分支(本地分支push到远程)</span>
+</span><span class='line'>git push origin :heads/<span class="o">[</span>name<span class="o">]</span> 或 <span class="nv">$ </span>git push origin :<span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除远程分支</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>标签tag操作相关</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag <span class="c"># 查看版本</span>
+</span><span class='line'>git tag <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建版本</span>
+</span><span class='line'>git tag -d <span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除版本</span>
+</span><span class='line'>git push origin <span class="o">[</span>name<span class="o">]</span> <span class="c"># 创建远程版本(本地版本push到远程)</span>
+</span><span class='line'>git push origin :refs/tags/<span class="o">[</span>name<span class="o">]</span> <span class="c"># 删除远程版本</span>
+</span><span class='line'>git pull origin --tags <span class="c"># 合并远程仓库的tag到本地</span>
+</span><span class='line'>git push origin --tags <span class="c"># 上传本地tag到远程仓库</span>
+</span><span class='line'>git tag -a <span class="o">[</span>name<span class="o">]</span> -m <span class="s1">&#39;yourMessage&#39;</span> <span class="c"># 创建带注释的tag</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+      </div>
+    </div>
+  </div>
+</article>
+<div class="post-tags">
+  <div class="container">
+    
+      <span class="tag">
+        <i class="fa fa-tag"></i>
+        <a class='category' href='/categories/git/'>git</a>
+      </span>
+    
+  </div>
+</div>
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2015/06/18/git-install/" title="Previous Post: git">&laquo; Previous: git</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2015/07/31/ruby/" title="Next Post: function, lambda, proc, blcok的区别">Next: function, lambda, proc, blcok的区别 &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="comments">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <section>
+        <h3>Comments</h3>
+        <div id="disqus_thread" aria-live="polite">
+          <noscript>Please enable JavasScript to view the comments.</noscript>
+        </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+  <span>
+  Copyright &copy; 2016 - Winter -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</span>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'winterbang';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.rails.pub/blog/2015/06/18/git-base/';
+        var disqus_url = 'http://www.rails.pub/blog/2015/06/18/git-base/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </body>
+
+</html>
