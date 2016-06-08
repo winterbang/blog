@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: 
 
-Sitemap: http://www.rails.pub/sitemap.xml
+Sitemap: http://www.rails.pub/sitemap.xml 
