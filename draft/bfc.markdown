@@ -6,8 +6,15 @@ BFC 即 Block Fromatting Context(块级格式化上下文)的缩写。W3C对BFC�
 ```
 浮动元素和绝对定位元素，非块级盒子的块级容器（例如 inline-blocks, table-cells, 和 table-captions），以及overflow值不为“visiable”的块级盒子，都会为他们的内容创建新的BFC（块级格式上下文）。
 ```
+#### 创建BFC
+如果想创建一个BFC，只需要给容器添加如下任何一个css样式就可以了。
+overflow: scroll
+overflow: hidden
+display: flex
+float: left
+display: table
 
-BFC的使用：
+#### BFC的使用：
 
 1.避免外边距折叠
 
