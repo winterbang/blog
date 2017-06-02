@@ -4,7 +4,7 @@
   <title><![CDATA[Winter'Blog]]></title>
   <link href="http://www.wentao.pub/atom.xml" rel="self"/>
   <link href="http://www.wentao.pub/"/>
-  <updated>2017-06-02T14:13:44+08:00</updated>
+  <updated>2017-06-02T14:16:39+08:00</updated>
   <id>http://www.wentao.pub/</id>
   <author>
     <name><![CDATA[Winter]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Extending Javascript - the Right Way]]></title>
+    <title type="html"><![CDATA[扩展js方法的最佳方式]]></title>
     <link href="http://www.wentao.pub/blog/2017/06/02/extending-javascript-the-right-way/"/>
     <updated>2017-06-02T13:48:25+08:00</updated>
     <id>http://www.wentao.pub/blog/2017/06/02/extending-javascript-the-right-way</id>
