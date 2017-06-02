@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ruby | Winter'Blog]]></title>
-  <link href="http://www.rails.pub/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://www.rails.pub/"/>
-  <updated>2016-06-07T19:52:21+08:00</updated>
-  <id>http://www.rails.pub/</id>
+  <link href="http://www.wentao.pub/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://www.wentao.pub/"/>
+  <updated>2017-06-02T14:13:44+08:00</updated>
+  <id>http://www.wentao.pub/</id>
   <author>
     <name><![CDATA[Winter]]></name>
     <email><![CDATA[{"address"=>&#8220;zwtao90@gmail.com&#8221;, &#8220;share_subject&#8221;=>&#8221;:title by :author&#8221;, &#8220;share_message&#8221;=>&#8221;:title by :author - :url&#8221;, &#8220;share_link_text&#8221;=>&#8221;Email&#8221;, &#8220;share_link_title&#8221;=>&#8221;Share via email&#8221;, &#8220;contact_link_text&#8221;=>&#8221;Email :author&#8221;, &#8220;contact_link_title&#8221;=>&#8221;Email :author&#8221;}]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Public Protected Private的微妙的区别]]></title>
-    <link href="http://www.rails.pub/blog/2015/09/02/ruby/"/>
+    <link href="http://www.wentao.pub/blog/2015/09/02/ruby/"/>
     <updated>2015-09-02T20:30:15+08:00</updated>
-    <id>http://www.rails.pub/blog/2015/09/02/ruby</id>
+    <id>http://www.wentao.pub/blog/2015/09/02/ruby</id>
     <content type="html"><![CDATA[<p>这三者的区别很微妙，尤其protected和private，在很长的一段时间里我一直没有明白他俩共同存在的意义，然而黑格尔说过：存在即合理。</p>
 
 <blockquote><p>public</p></blockquote>
@@ -36,9 +36,9 @@
   
   <entry>
     <title type="html"><![CDATA[Function, Lambda, Proc, Blcok的区别]]></title>
-    <link href="http://www.rails.pub/blog/2015/07/31/ruby/"/>
+    <link href="http://www.wentao.pub/blog/2015/07/31/ruby/"/>
     <updated>2015-07-31T22:59:17+08:00</updated>
-    <id>http://www.rails.pub/blog/2015/07/31/ruby</id>
+    <id>http://www.wentao.pub/blog/2015/07/31/ruby</id>
     <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -106,9 +106,9 @@
   
   <entry>
     <title type="html"><![CDATA[Include和extend的使用]]></title>
-    <link href="http://www.rails.pub/blog/2015/06/17/syntax/"/>
+    <link href="http://www.wentao.pub/blog/2015/06/17/syntax/"/>
     <updated>2015-06-17T12:08:58+08:00</updated>
-    <id>http://www.rails.pub/blog/2015/06/17/syntax</id>
+    <id>http://www.wentao.pub/blog/2015/06/17/syntax</id>
     <content type="html"><![CDATA[<p>1.在类定义中引入模块，是模块中的方法成为类的实例方法。这种情况是最常见的，直接 <code>include</code> 即可。</p>
 
 <pre><code class="ruby">module Basic

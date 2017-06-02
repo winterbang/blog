@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Git | Winter'Blog]]></title>
-  <link href="http://www.rails.pub/categories/git/atom.xml" rel="self"/>
-  <link href="http://www.rails.pub/"/>
-  <updated>2016-06-07T19:52:21+08:00</updated>
-  <id>http://www.rails.pub/</id>
+  <link href="http://www.wentao.pub/categories/git/atom.xml" rel="self"/>
+  <link href="http://www.wentao.pub/"/>
+  <updated>2017-06-02T14:13:44+08:00</updated>
+  <id>http://www.wentao.pub/</id>
   <author>
     <name><![CDATA[Winter]]></name>
     <email><![CDATA[{"address"=>&#8220;zwtao90@gmail.com&#8221;, &#8220;share_subject&#8221;=>&#8221;:title by :author&#8221;, &#8220;share_message&#8221;=>&#8221;:title by :author - :url&#8221;, &#8220;share_link_text&#8221;=>&#8221;Email&#8221;, &#8220;share_link_title&#8221;=>&#8221;Share via email&#8221;, &#8220;contact_link_text&#8221;=>&#8221;Email :author&#8221;, &#8220;contact_link_title&#8221;=>&#8221;Email :author&#8221;}]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Git Base]]></title>
-    <link href="http://www.rails.pub/blog/2015/06/18/git-base/"/>
+    <link href="http://www.wentao.pub/blog/2015/06/18/git-base/"/>
     <updated>2015-06-18T11:13:48+08:00</updated>
-    <id>http://www.rails.pub/blog/2015/06/18/git-base</id>
+    <id>http://www.wentao.pub/blog/2015/06/18/git-base</id>
     <content type="html"><![CDATA[<p>起步
 <code>bash
 git init    #git初始化
@@ -62,9 +62,9 @@ git tag -a [name] -m 'yourMessage' # 创建带注释的tag
   
   <entry>
     <title type="html"><![CDATA[Git]]></title>
-    <link href="http://www.rails.pub/blog/2015/06/18/git-install/"/>
+    <link href="http://www.wentao.pub/blog/2015/06/18/git-install/"/>
     <updated>2015-06-18T11:00:24+08:00</updated>
-    <id>http://www.rails.pub/blog/2015/06/18/git-install</id>
+    <id>http://www.wentao.pub/blog/2015/06/18/git-install</id>
     <content type="html"><![CDATA[<h3>git 安装</h3>
 
 <p><code>ubuntu</code>
