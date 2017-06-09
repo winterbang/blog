@@ -99,7 +99,7 @@ task :new_post, :title do |t, args|
   if args.title
     title = args.title
   else
-    title = get_stdin("Enter a title for your post: ")
+    title = get_stdin("请输入文章标题：")
   end
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   mkdir_p "#{source_dir}/#{posts_dir}"
@@ -252,7 +252,7 @@ desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   puts "## Pulling any updates from Github Pages "
-  cd "#{deploy_dir}" do 
+  cd "#{deploy_dir}" do
     Bundler.with_clean_env { system "git pull" }
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
