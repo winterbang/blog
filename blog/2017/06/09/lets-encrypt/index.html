@@ -18,15 +18,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Git - Winter&#8217;Blog</title>
+  <title>快速获取/更新 Let&#8217;s Encrypt 证书 - Winter&#8217;Blog</title>
   <meta name="author" content="Winter">
 
   
-  <meta name="description" content="Git written in git git 安装 ubuntu 1
+  <meta name="description" content="快速获取/更新 Let's Encrypt 证书 written 一个快速获取/更新 Let&rsquo;s encrypt 证书的 shell script 调用 acme_tiny.py 认证、获取、更新证书，不需要额外的依赖。 下载到本地 1
 2
-sudo apt-get install git
-sudo apt-get install git-core mac 1
-brew install git git &laquo; Previous: ubuntu服务器相关 &hellip;">
+3
+wget https://raw. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -35,7 +34,7 @@ brew install git git &laquo; Previous: ubuntu服务器相关 &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.wentao.pub/blog/2015/06/18/git-install">
+  <link rel="canonical" href="http://www.wentao.pub/blog/2017/06/09/lets-encrypt">
   <link href="/favicon.png" rel="icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -103,59 +102,59 @@ brew install git git &laquo; Previous: ubuntu服务器相关 &hellip;">
   </ul>
   <div id="tagscloud">
   
-    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc2' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
   
     <a class='category tagc1' href='/categories/ruby/' >ruby</a>
   
     <a class='category tagc2' href='/categories/rails/' >rails</a>
-  
-    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
-  
-    <a class='category tagc1' href='/categories/git/' >git</a>
-  
-  
-    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
-  
-    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
-  
-    <a class='category tagc5' href='/categories/rails/' >rails</a>
   
     <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
   
     <a class='category tagc5' href='/categories/git/' >git</a>
   
   
-    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
   
     <a class='category tagc5' href='/categories/ruby/' >ruby</a>
   
-    <a class='category tagc2' href='/categories/rails/' >rails</a>
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
   
     <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
   
-    <a class='category tagc5' href='/categories/git/' >git</a>
+    <a class='category tagc2' href='/categories/git/' >git</a>
   
   
-    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+    <a class='category tagc2' href='/categories/octopress/' >octopress</a>
   
     <a class='category tagc1' href='/categories/ruby/' >ruby</a>
   
-    <a class='category tagc5' href='/categories/rails/' >rails</a>
+    <a class='category tagc2' href='/categories/rails/' >rails</a>
   
     <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
   
     <a class='category tagc1' href='/categories/git/' >git</a>
   
   
-    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+    <a class='category tagc2' href='/categories/octopress/' >octopress</a>
   
     <a class='category tagc1' href='/categories/ruby/' >ruby</a>
   
-    <a class='category tagc1' href='/categories/rails/' >rails</a>
+    <a class='category tagc5' href='/categories/rails/' >rails</a>
   
     <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
   
-    <a class='category tagc1' href='/categories/git/' >git</a>
+    <a class='category tagc2' href='/categories/git/' >git</a>
   
 </div>
 
@@ -168,7 +167,7 @@ brew install git git &laquo; Previous: ubuntu服务器相关 &hellip;">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h1>Git</h1>
+        <h1>快速获取/更新 Let&#8217;s Encrypt 证书</h1>
         <div class="meta">
           written 
 
@@ -183,35 +182,76 @@ brew install git git &laquo; Previous: ubuntu服务器相关 &hellip;">
 
 
 
-<time datetime="2015-06-18T11:00:24+08:00" pubdate data-updated="true"></time>
+<time datetime="2017-06-09T16:07:53+08:00" pubdate data-updated="true"></time>
           
-
-in
-<span class="categories">
-  
-    <a class='category' href='/categories/git/'>git</a>
-  
-</span>
 
 
         </div>
-        <h3>git 安装</h3>
+        <h2>一个快速获取/更新 Let&rsquo;s encrypt 证书的 shell script</h2>
 
-<p><code>ubuntu</code></p>
+<p>调用 acme_tiny.py 认证、获取、更新证书，不需要额外的依赖。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><strong>下载到本地</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install git
-</span><span class='line'>sudo apt-get install git-core
-</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>wget https://raw.githubusercontent.com/xdtianyu/scripts/master/lets-encrypt/letsencrypt.conf
+</span><span class='line'>wget https://raw.githubusercontent.com/xdtianyu/scripts/master/lets-encrypt/letsencrypt.sh
+</span><span class='line'>chmod +x letsencrypt.sh</span></code></pre></td></tr></table></div></figure>
 
 
-<p>
-<code>mac</code></p>
+<p><strong>配置文件</strong></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew install git
-</span></code></pre></td></tr></table></div></figure>
+<p>只需要修改 DOMAIN_KEY DOMAIN_DIR DOMAINS 为你自己的信息</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ACCOUNT_KEY="letsencrypt-account.key"
+</span><span class='line'>DOMAIN_KEY="example.com.key"
+</span><span class='line'>DOMAIN_DIR="/var/www/example.com"
+</span><span class='line'>DOMAINS="DNS:example.com,DNS:whatever.example.com"
+</span><span class='line'>#ECC=TRUE
+</span><span class='line'>#LIGHTTPD=TRUE</span></code></pre></td></tr></table></div></figure>
+
+
+<p>执行过程中会自动生成需要的 key 文件。其中 <code>ACCOUNT_KEY</code> 为账户密钥， <code>DOMAIN_KEY</code> 为域名私钥， <code>DOMAIN_DIR</code> 为域名指向的目录，<code>DOMAINS</code> 为要签的域名列表， 需要 <code>ECC</code> 证书时取消 <code>#ECC=TRUE</code> 的注释，需要为 <code>lighttpd</code> 生成 <code>pem</code> 文件时，取消 <code>#LIGHTTPD=TRUE</code> 的注释。</p>
+
+<p><strong>运行</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>./letsencrypt.sh letsencrypt.conf</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>注意</strong></p>
+
+<p>需要已经绑定域名到 <code>/var/www/example.com</code> 目录，即通过 <code>http://example.com</code> <code>http://whatever.example.com</code> 可以访问到 <code>/var/www/example.com</code> 目录，用于域名的验证</p>
+
+<p><strong>将会生成如下几个文件</strong></p>
+
+<pre><code>lets-encrypt-x1-cross-signed.pem
+example.chained.crt          # 即网上搜索教程里常见的 fullchain.pem
+example.com.key              # 即网上搜索教程里常见的 privkey.pem
+example.crt
+example.csr
+</code></pre>
+
+<p><strong>在 nginx 里添加 ssl 相关的配置</strong></p>
+
+<pre><code>ssl_certificate     /path/to/cert/example.chained.crt;
+ssl_certificate_key /path/to/cert/example.key;
+</code></pre>
+
+<p><strong>cron 定时任务</strong></p>
+
+<p>每个月自动更新一次证书，可以在脚本最后加入 service nginx reload等重新加载服务。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0 0 1 * * /etc/nginx/certs/letsencrypt.sh /etc/nginx/certs/letsencrypt.conf &gt;&gt; /var/log/lets-encrypt.log 2&gt;&1</span></code></pre></td></tr></table></div></figure>
 
 
       </div>
@@ -220,11 +260,6 @@ in
 </article>
 <div class="post-tags">
   <div class="container">
-    
-      <span class="tag">
-        <i class="fa fa-tag"></i>
-        <a class='category' href='/categories/git/'>git</a>
-      </span>
     
   </div>
 </div>
@@ -235,11 +270,9 @@ in
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         
-          <a class="pull-left" href="/blog/2015/06/17/ubuntu/" title="Previous Post: ubuntu服务器相关－前言">&laquo; Previous: ubuntu服务器相关－前言</a>
+          <a class="pull-left" href="/blog/2017/06/02/extending-javascript-the-right-way/" title="Previous Post: 扩展js方法的最佳方式">&laquo; Previous: 扩展js方法的最佳方式</a>
         
 
-        
-          <a class="pull-right" href="/blog/2015/06/18/git-base/" title="Next Post: git base">Next: git base &raquo;</a>
         
       </div>
     </div>
@@ -285,8 +318,8 @@ in
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.wentao.pub/blog/2015/06/18/git-install/';
-        var disqus_url = 'http://www.wentao.pub/blog/2015/06/18/git-install/';
+        var disqus_identifier = 'http://www.wentao.pub/blog/2017/06/09/lets-encrypt/';
+        var disqus_url = 'http://www.wentao.pub/blog/2017/06/09/lets-encrypt/';
         var disqus_script = 'embed.js';
       
     (function () {
