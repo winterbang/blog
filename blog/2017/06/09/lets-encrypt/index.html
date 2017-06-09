@@ -102,44 +102,11 @@ wget https://raw. &hellip;">
   </ul>
   <div id="tagscloud">
   
-    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
-  
-    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
-  
-    <a class='category tagc1' href='/categories/rails/' >rails</a>
-  
-    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
-  
-    <a class='category tagc2' href='/categories/git/' >git</a>
-  
-  
-    <a class='category tagc1' href='/categories/octopress/' >octopress</a>
-  
-    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
-  
-    <a class='category tagc2' href='/categories/rails/' >rails</a>
-  
-    <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
-  
-    <a class='category tagc5' href='/categories/git/' >git</a>
-  
-  
-    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
-  
-    <a class='category tagc5' href='/categories/ruby/' >ruby</a>
-  
-    <a class='category tagc1' href='/categories/rails/' >rails</a>
-  
-    <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
-  
-    <a class='category tagc2' href='/categories/git/' >git</a>
-  
-  
     <a class='category tagc2' href='/categories/octopress/' >octopress</a>
   
-    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
   
-    <a class='category tagc2' href='/categories/rails/' >rails</a>
+    <a class='category tagc5' href='/categories/rails/' >rails</a>
   
     <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
   
@@ -148,11 +115,44 @@ wget https://raw. &hellip;">
   
     <a class='category tagc2' href='/categories/octopress/' >octopress</a>
   
-    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
   
     <a class='category tagc5' href='/categories/rails/' >rails</a>
   
     <a class='category tagc1' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc5' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc2' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc1' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc2' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc5' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc2' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc5' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
+  
+    <a class='category tagc5' href='/categories/git/' >git</a>
+  
+  
+    <a class='category tagc5' href='/categories/octopress/' >octopress</a>
+  
+    <a class='category tagc2' href='/categories/ruby/' >ruby</a>
+  
+    <a class='category tagc1' href='/categories/rails/' >rails</a>
+  
+    <a class='category tagc2' href='/categories/ubuntu/' >ubuntu</a>
   
     <a class='category tagc2' href='/categories/git/' >git</a>
   
@@ -250,8 +250,172 @@ ssl_certificate_key /path/to/cert/example.key;
 
 <p>每个月自动更新一次证书，可以在脚本最后加入 service nginx reload等重新加载服务。</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0 0 1 * * /etc/nginx/certs/letsencrypt.sh /etc/nginx/certs/letsencrypt.conf &gt;&gt; /var/log/lets-encrypt.log 2&gt;&1</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Usage: /etc/nginx/certs/letsencrypt.sh /etc/nginx/certs/letsencrypt.conf</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">CONFIG</span><span class="o">=</span><span class="nv">$1</span>
+</span><span class='line'><span class="nv">ACME_TINY</span><span class="o">=</span><span class="s2">&quot;/tmp/acme_tiny.py&quot;</span>
+</span><span class='line'><span class="nv">DOMAIN_KEY</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> -f <span class="s2">&quot;$CONFIG&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>    . <span class="s2">&quot;$CONFIG&quot;</span>
+</span><span class='line'>    <span class="nv">DIRNAME</span><span class="o">=</span><span class="k">$(</span>dirname <span class="s2">&quot;$CONFIG&quot;</span><span class="k">)</span>
+</span><span class='line'>    <span class="nb">cd</span> <span class="s2">&quot;$DIRNAME&quot;</span> <span class="o">||</span> <span class="nb">exit </span>1
+</span><span class='line'><span class="k">else</span>
+</span><span class='line'>    <span class="nb">echo</span> <span class="s2">&quot;ERROR CONFIG.&quot;</span>
+</span><span class='line'>    <span class="nb">exit </span>1
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">KEY_PREFIX</span><span class="o">=</span><span class="s2">&quot;${DOMAIN_KEY%%.*}&quot;</span>
+</span><span class='line'><span class="nv">DOMAIN_CRT</span><span class="o">=</span><span class="s2">&quot;$KEY_PREFIX.crt&quot;</span>
+</span><span class='line'><span class="nv">DOMAIN_PEM</span><span class="o">=</span><span class="s2">&quot;$KEY_PREFIX.pem&quot;</span>
+</span><span class='line'><span class="nv">DOMAIN_CSR</span><span class="o">=</span><span class="s2">&quot;$KEY_PREFIX.csr&quot;</span>
+</span><span class='line'><span class="nv">DOMAIN_CHAINED_CRT</span><span class="o">=</span><span class="s2">&quot;$KEY_PREFIX.chained.crt&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&quot;$ACCOUNT_KEY&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>    <span class="nb">echo</span> <span class="s2">&quot;Generate account key...&quot;</span>
+</span><span class='line'>    openssl genrsa <span class="m">4096</span> &gt; <span class="s2">&quot;$ACCOUNT_KEY&quot;</span>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&quot;$DOMAIN_KEY&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>    <span class="nb">echo</span> <span class="s2">&quot;Generate domain key...&quot;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$ECC&quot;</span> <span class="o">=</span> <span class="s2">&quot;TRUE&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>        openssl ecparam -genkey -name secp256r1 <span class="p">|</span> openssl ec -out <span class="s2">&quot;$DOMAIN_KEY&quot;</span>
+</span><span class='line'>    <span class="k">else</span>
+</span><span class='line'>        openssl genrsa <span class="m">2048</span> &gt; <span class="s2">&quot;$DOMAIN_KEY&quot;</span>
+</span><span class='line'>    <span class="k">fi</span>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Generate CSR...$DOMAIN_CSR&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">OPENSSL_CONF</span><span class="o">=</span><span class="s2">&quot;/etc/ssl/openssl.cnf&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&quot;$OPENSSL_CONF&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>    <span class="nv">OPENSSL_CONF</span><span class="o">=</span><span class="s2">&quot;/etc/pki/tls/openssl.cnf&quot;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&quot;$OPENSSL_CONF&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>        <span class="nb">echo</span> <span class="s2">&quot;Error, file openssl.cnf not found.&quot;</span>
+</span><span class='line'>        <span class="nb">exit </span>1
+</span><span class='line'>    <span class="k">fi</span>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'>openssl req -new -sha256 -key <span class="s2">&quot;$DOMAIN_KEY&quot;</span> -subj <span class="s2">&quot;/&quot;</span> -reqexts SAN -config &lt;<span class="o">(</span>cat <span class="nv">$OPENSSL_CONF</span> &lt;<span class="o">(</span><span class="nb">printf</span> <span class="s2">&quot;[SAN]\nsubjectAltName=%s&quot;</span> <span class="s2">&quot;$DOMAINS&quot;</span><span class="o">))</span> &gt; <span class="s2">&quot;$DOMAIN_CSR&quot;</span>
+</span><span class='line'>
+</span><span class='line'>wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py --no-check-certificate -O <span class="nv">$ACME_TINY</span> -o /dev/null
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> -f <span class="s2">&quot;$DOMAIN_CRT&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>    mv <span class="s2">&quot;$DOMAIN_CRT&quot;</span> <span class="s2">&quot;$DOMAIN_CRT-OLD-$(date +%y%m%d-%H%M%S)&quot;</span>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">DOMAIN_DIR</span><span class="o">=</span><span class="s2">&quot;$DOMAIN_DIR/.well-known/acme-challenge/&quot;</span>
+</span><span class='line'>mkdir -p <span class="s2">&quot;$DOMAIN_DIR&quot;</span>
+</span><span class='line'>
+</span><span class='line'>python <span class="nv">$ACME_TINY</span> --account-key <span class="s2">&quot;$ACCOUNT_KEY&quot;</span> --csr <span class="s2">&quot;$DOMAIN_CSR&quot;</span> --acme-dir <span class="s2">&quot;$DOMAIN_DIR&quot;</span> &gt; <span class="s2">&quot;$DOMAIN_CRT&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$?&quot;</span> !<span class="o">=</span> <span class="m">0</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>    <span class="nb">exit </span>1
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&quot;lets-encrypt-x3-cross-signed.pem&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>    wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem --no-check-certificate -o /dev/null
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'>cat <span class="s2">&quot;$DOMAIN_CRT&quot;</span> lets-encrypt-x3-cross-signed.pem &gt; <span class="s2">&quot;$DOMAIN_CHAINED_CRT&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$LIGHTTPD&quot;</span> <span class="o">=</span> <span class="s2">&quot;TRUE&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+</span><span class='line'>    cat <span class="s2">&quot;$DOMAIN_KEY&quot;</span> <span class="s2">&quot;$DOMAIN_CRT&quot;</span> &gt; <span class="s2">&quot;$DOMAIN_PEM&quot;</span>
+</span><span class='line'>    <span class="nb">echo</span> -e <span class="s2">&quot;\e[01;32mNew pem: $DOMAIN_PEM has been generated\e[0m&quot;</span>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;\e[01;32mNew cert: $DOMAIN_CHAINED_CRT has been generated\e[0m&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#service nginx reload</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="m">0</span> <span class="m">0</span> <span class="m">1</span> * * /etc/nginx/certs/letsencrypt.sh /etc/nginx/certs/letsencrypt.conf &gt;&gt; /var/log/lets-encrypt.log 2&gt;<span class="p">&amp;</span>1
+</span></code></pre></td></tr></table></div></figure>
 
 
       </div>
